@@ -1,0 +1,338 @@
+<html><head><meta charset="utf-8"/><title>Casal Rodríguez Anxo.sql</title><style>.fuente{font-family: 'Lucida Console';font-size:13px;}
+.azul{background-color:#bdd0ef;color:#000;padding: 7px 5px 7px 10px;}
+.verde{background-color:#91ffb3;color:#000;padding: 7px 5px 7px 10px;}
+.naranja{background-color:#f9d284;color:#000;padding: 7px 5px 7px 10px;}
+.amarillo{background-color:#fafcd1;color:#000;padding: 7px 5px 7px 10px;}
+.rojo{background-color:#f9b9b6;color:#000;padding: 7px 5px 7px 10px;}
+.rojoErrorSolu{background-color:#e4afaf;color:#000;padding: 7px 5px 7px 10px;}
+.violeta{background-color:#c6bcff;color:#000;padding: 7px 5px 7px 10px;}
+.multi{background-color:#88f;}
+.enunciado{background-color:ddd;margin-top:20px;padding:6px;}
+.margen{margin-left:30px;padding:10px;}
+.margenver{margin-top: 5px;margin-bottom: 3px;}
+.nomargen{margin:0px;}
+.pocomargen{margin:5px;}
+.pocopadding{padding:4px 6px 4px 6px;}
+.titulo{}
+.tituloCorregido{background-color:#007d3c;color:#fff;padding: 5px 0 5px 10px;}
+.tituloCopiado{color:#a00;}
+.tituloMedioCopiado{color:#00a;}
+.formatoIncorrecto{color:#0aa;}
+.formatoMedioIncorrecto{color:#a0a;}
+.formatoUnPocoIncorrecto{color:#aa0;}
+.formatoEntregaFueraPlazo{color:#777}
+.mensajeGeneral{color:#000;background-color:#ffff00;}
+.margenTop{margin-top:15px}
+.boton{background-color:#fff;padding:0 5px;opacity:0.1;cursor:pointer;}
+.boton:hover{opacity:0.8;}
+</style>
+<script>
+function copyJavacript(id) {
+var x = document.getElementsByClassName(id);
+    var textArea = document.createElement('textarea');
+	var cad=' ';
+var i;
+for (i = 0; i < x.length; i++) {
+	cad=cad+x[i].textContent+'\n';
+} 
+textArea.value = cad;
+    document.body.appendChild(textArea); 
+    textArea.select(); 
+    var successful = document.execCommand('copy'); 
+    document.body.removeChild(textArea); 
+}
+</script>
+<script>
+function copyJavacripTipoR(id, subid) {
+var x = document.getElementsByClassName(id);
+ var textArea = document.createElement('textarea');
+	var cad=' ';
+var i, j;
+for (i = 0; i < x.length; i++) {
+var xx = x[i].getElementsByClassName('respu');
+for (j = 0; j < xx.length; j++) {
+cad=cad+xx[j].textContent+';';
+} 
+} 
+textArea.value = cad;
+    document.body.appendChild(textArea); 
+    textArea.select(); 
+    var successful = document.execCommand('copy'); 
+    document.body.removeChild(textArea); 
+}
+</script>
+<script>
+function copyJavacripTipoS(id, subid) {
+var x = document.getElementsByClassName(id);
+ var textArea = document.createElement('textarea');
+	var cad=' ';
+var i, j;
+for (i = 0; i < x.length; i++) {
+var xx = x[i].getElementsByClassName('soluc');
+for (j = 0; j < xx.length; j++) {
+cad=cad+xx[j].textContent+';';
+} 
+} 
+textArea.value = cad;
+    document.body.appendChild(textArea); 
+    textArea.select(); 
+    var successful = document.execCommand('copy'); 
+    document.body.removeChild(textArea); 
+}
+</script>
+</head><body>
+<h2 class='titulo margenver'>Casal Rodríguez Anxo</h2>
+<h2 class='formatoMedioIncorrecto margenver'> <span style='margin-left:30px;font-size:18px;';> El formato tiene errores</span></h2>
+<h2 class='formatoEntregaFueraPlazo margenver'> <span style='margin-left:30px;font-size:18px;';> Entrega fuera de plazo</span></h2>
+
+
+<div class='enunciado'>
+1: ¿Para qué plataformas tenemos juegos?
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(0)'> 1</button>   <br>
+<div class='0'>&nbsp; select distinct plataforma from juegos</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+2: ¿Qué juegos tienen un precio de alquiler inferior a 6 pero superior a 4?
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(1)'> 2</button>   <br>
+<div class='1'>&nbsp; select * from juegos where precioAlquiler &gt; 4 and precioAlquiler &lt; 6</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+3: Clasifica los juegos por plataformas ordenándolos de forma alfabética por el nombre de mayor a menor.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(2)'> 3</button>   <br>
+<div class='2'>&nbsp; select * from juegos order by plataforma asc, nombre desc</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+4: Nombre de todos los juegos con un precio de venta menor que 40.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(3)'> 4</button>   <br>
+<div class='3'>&nbsp; select nombre, precioventa from juegos where precioventa&lt;40</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+5: ¿A qué juegos podemos jugar en un PC?
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(4)'> 5</button>   <br>
+<div class='4'>&nbsp; select * from juegos where plataforma = "PC"</span></div>
+<div class=' 4'>&nbsp; &nbsp;Otra solución: select * from juegos where plataforma="PC"</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+6: Obtén los pares de valores plataforma, precioAlquiler sin repetir
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(5)'> 6</button>   <br>
+<div class='5'>&nbsp; select distinct plataforma, precioalquiler from juegos</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+7: ¿Cuál es el juego de Xbox más barato?
+</div>
+
+<div class=' rojo fuente'>
+ error: <button class='boton' onclick='copyJavacript(6)'> 7</button> <button class='boton' onclick='copyJavacripTipoR(6)'>7 R</button> <button class='boton' onclick='copyJavacripTipoS(6)'>7 S</button> No se piden subconsultas. La consulta est&aacute mal. Muestras todos los juegos que tengan el mismo precio de venta que el m&aacutes barato de xbox. Aunque no sean de Xbox<br>
+<div class='6 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>7*/</span><span class='respu'>select nombre from juegos where precioventa = (select min(precioventa) from juegos where plataforma = "xbox")</span></div>
+<div class='6 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;/* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;margin-left:2px;'>7*/</span><span class='soluc'>select nombre from juegos where plataforma="xbox" order by precioVenta limit 1</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+8: Identificador, nombre y precio de venta de los juegos de precio de venta mayor que 30 o menor que 20 euros, ordenadas de menor a mayor por precio.
+</div>
+
+<div class=' rojo fuente'>
+ error: <button class='boton' onclick='copyJavacript(7)'> 8</button> <button class='boton' onclick='copyJavacripTipoR(7)'>8 R</button> <button class='boton' onclick='copyJavacripTipoS(7)'>8 S</button> 
+<div class='7 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>8*/</span><span class='respu'>select id, nombre, precioventa from juegos where between 20 and 30 order by precioventa asc</span></div>
+<div class='7 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;/* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;margin-left:2px;'>8*/</span><span class='soluc'>select id, nombre, precioVenta from juegos where precioVenta&gt;30 or precioVenta&lt;20 order by precioVenta asc</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+9: ¿Qué plataformas tiene un precio de alquiler de 4?
+</div>
+
+<div class=' rojo fuente'>
+ error: <button class='boton' onclick='copyJavacript(8)'> 9</button> <button class='boton' onclick='copyJavacripTipoR(8)'>9 R</button> <button class='boton' onclick='copyJavacripTipoS(8)'>9 S</button> 
+<div class='8 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>9*/</span><span class='respu'>select distinct plataforma from juegos where precioalquiler = (select min(precioalquiler)from juegos)</span></div>
+<div class='8 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;/* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;margin-left:2px;'>9*/</span><span class='soluc'>select DISTINCT plataforma from juegos where precioAlquiler = 4</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+10: ¿De qué juegos desconocemos el stock de alquiler?
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(9)'> 10</button>   <br>
+<div class='9'>&nbsp; select * from juegos where stockalquiler is null</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+11: Obtener los juegos para los que hay versiones para XBOX, PC y Playstation con un precio de venta entre 20 y 50 ordenados por nombre de forma descendente.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(10)'> 11</button> 
+<div class='10'>&nbsp; select * from juegos where precioventa between 20 and 50 and plataforma in ("PC", "XBOX", "playstation") order by nombre desc</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+12: Juegos con un precio de alquiler de 3,  5,  y 8.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(11)'> 12</button>   <br>
+<div class='11'>&nbsp; select * from juegos where precioalquiler in (3, 5, 8)</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+13: Muestra los juegos que ordenados alfabéticamente se encuentren en las posiciones 5, 6 y 7 
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(12)'> 13</button>   <br>
+<div class='12'>&nbsp; select * from juegos order by nombre asc limit 4, 3</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+14: Renombra la tabla juegos a xogos y obtén el nombre y la plataforma de los tres primeros juegos referenciándolos con el nombre de la tabla.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(13)'> 14</button> 
+<div class='13'>&nbsp; select plataforma as "xogos.plataforma", nombre "xogos.nombre" from xogos limit 0, 3</span></div><div class='13'>&nbsp; rename table juegos to xogos</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+15: Obtener los juegos que no tengan un '&' en su nombre
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(14)'> 15</button>   <br>
+<div class='14'>&nbsp; SELECT * FROM xogos WHERE nombre not LIKE "%&%"</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+16: Obtén las plataformas con una P en su nombre
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(15)'> 16</button>   <br>
+<div class='15'>&nbsp; select distinct plataforma from xogos where plataforma like "%P%"</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+17: Obtener el nombre de las juegos que cuyo nombre empiece por M.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(16)'> 17</button>   <br>
+<div class='16'>&nbsp; select nombre from xogos where nombre like "M%"</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+18: Obtener el nombre y plataforma de las juegos que cuyo stock total sea mayor que 10 y su nombre empiece por L.
+</div>
+
+<div class=' naranja fuente'>
+ regular: <button class='boton' onclick='copyJavacript(17)'> 18</button> <button class='boton' onclick='copyJavacripTipoR(17)'>18 R</button> <button class='boton' onclick='copyJavacripTipoS(17)'>18 S</button> 
+<div class='17 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>18*/</span><span class='respu'>select nombre, plataforma from xogos where nombre like "L%" and stockventa &gt; 10</span></div>
+<div class='17 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;  /* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;'>18*/</span><span class='soluc'>select nombre, plataforma from juegos where stockAlquiler+stockVenta&gt;10 and nombre like "L%"</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+19: Nombre de los juegos que el nombre empieza por M o por L seguido de cualquier carácter simple, una N y cualquier cadena de n caracteres.
+</div>
+
+<div class=' rojo fuente'>
+ error: <button class='boton' onclick='copyJavacript(18)'> 19</button> <button class='boton' onclick='copyJavacripTipoR(18)'>19 R</button> <button class='boton' onclick='copyJavacripTipoS(18)'>19 S</button> 
+<div class='18 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>19*/</span><span class='respu'>select nombre from xogos where nombre like "M_N%" or "L_N%"</span></div>
+<div class='18 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;/* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;margin-left:2px;'>19*/</span><span class='soluc'>select nombre from juegos where nombre like 'M_n%' or nombre like 'L_n%'</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+20: Listar los juegos con un stock de venta entre 1 y 10 cuyo nombre contenga una O y que no tengan un precio de venta entre 30 y 40.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(19)'> 20</button>   <br>
+<div class='19'>&nbsp; select * from xogos where stockventa between 1 and 10 and nombre like "%O%" and precioventa not between 30 and 40</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+21: Juegos que tengan como segundo carácter en el nombre una vocal
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(20)'> 21</button>   <br>
+<div class='20'>&nbsp; select * from xogos where nombre like "_A%" or nombre like "_E%" or nombre like "_I%" or nombre like "_O%" or nombre like "_U%"</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+22: Juegos que no tengan como segundo carácter en el nombre una vocal
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(21)'> 22</button>   <br>
+<div class='21'>&nbsp; select * from xogos where nombre not like "_A%" and nombre not like "_E%" and nombre not like "_i%"and nombre not like "_o%" and nombre not like "_u%"</span></div>
+</div>
+
+<br><div style='font-size:17pt;padding: 3px 5px;margin: 0;color:#000;background-color:#5f5;width:50%;'>Correctas: 17.0</div>
+<div style='font-size:17pt;padding: 3px 5px;margin: 0;color:#000;background-color:#ffd284;width:50%;'>Regulares: 1.0</div>
+<div style='font-size:17pt;padding: 3px 5px;margin: 0;color:#000;background-color:#ff9999;width:50%;'>Incorrectas: 4.0</div>
+<div style='font-size:25pt;padding: 5px 5px;margin: 20px 0 120px 0;color:#fff;background-color:#5a5;'>Puntos totales= 8.02  Formato con errores *0.75 =6.0150003  Fuera de plazo *0.7 =4.2105002  Puntos Finales = 4.3</div>

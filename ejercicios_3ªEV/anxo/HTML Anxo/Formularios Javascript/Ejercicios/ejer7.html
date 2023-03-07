@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var cont = 0;
+        var limit = 10;
+
+
+        function añadir() {
+
+            var lista = document.getElementById("lista");
+            var numero = lista.childNodes;
+            if (cont < limit) {
+
+                var input = document.createElement("input");
+                input.setAttribute("type", "text");
+                var newElement = document.createElement("li");
+                newElement.appendChild(input);
+                lista.appendChild(newElement);
+                cont++;
+
+            }
+        }
+
+        function eliminar() {
+
+            if (cont != 0) {
+                var lista = document.getElementById("lista");
+                var numero = lista.childNodes;
+                lista.removeChild(lista.lastChild);
+                cont--
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <form action="">
+
+        <h1>Introduce tus aficiones</h1>
+
+        <ol id="lista">
+        </ol>
+
+        <input type="button" value="Añadir" onclick="añadir()">
+        <input type="button" value="Eliminar" onclick="eliminar()">
+
+    </form>
+
+</body>
+
+</html>

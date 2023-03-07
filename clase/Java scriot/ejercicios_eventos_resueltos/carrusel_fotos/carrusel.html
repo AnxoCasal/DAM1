@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coches</title>
+    <style>
+        *{box-sizing: border-box;
+        }
+        body{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+        div{
+            float:left;
+        }
+        .contenedor_producto{
+            width:800px;
+            height:650px;
+            margin:auto;
+        }
+        .imagen_principal{
+            width:100%;
+            height:450px;
+            border:1px solid #ff0000;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #informacion{
+            color:white;
+            position:relative;
+            left:30px;
+            top:30px;
+        }
+        [class*="simagen_"]{
+            width:25%;
+            height:150px;
+            border:1px solid #0000ff;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var fondosp=["url('imagen1p.jpg')","url('imagen2p.jpg')","url('imagen3p.jpg')","url('imagen4p.jpg')"];
+            var fondosg=["url('imagen1g.jpg')","url('imagen2g.jpg')","url('imagen3g.jpg')","url('imagen4g.jpg')"];
+            var principal=document.getElementsByClassName("imagen_principal");
+            var primera=document.getElementById("uno");
+            var segunda=document.getElementById("dos");
+            var tercera=document.getElementById("tres");
+            var cuarta=document.getElementById("cuatro");
+            primera.style.backgroundImage=fondosp[0];
+            segunda.style.backgroundImage=fondosp[1];
+            tercera.style.backgroundImage=fondosp[2];
+            cuarta.style.backgroundImage=fondosp[3];
+            principal[0].style.backgroundImage=fondosg[0];
+            var imagenes = document.getElementsByTagName('div');
+                for(i in imagenes) {
+                    imagenes[i].onmouseover = mostrar;
+                }
+                function mostrar() {
+                switch(this.className) {
+                    case 'simagen_1':
+                        principal[0].style.backgroundImage=fondosg[0]; 
+                        var info=document.getElementById("informacion") ;
+                        info.innerHTML="<h4>Modelo:Cadillac</h4><h4>Motor:V8 340 cc</h4>";
+                        break;
+                    case 'simagen_2':
+                        principal[0].style.backgroundImage=fondosg[1]; 
+                        var info=document.getElementById("informacion") ;
+                        info.innerHTML="<h4>Modelo:Ford</h4><h4>Motor:V6 260 cc</h4>";
+                        break;
+                    case 'simagen_3':
+                        principal[0].style.backgroundImage=fondosg[2]; 
+                        var info=document.getElementById("informacion") ;
+                        info.innerHTML="<h4>Modelo:Buick</h4><h4>Motor:V4 300 cc</h4>";
+                        break;
+                    case 'simagen_4':
+                        principal[0].style.backgroundImage=fondosg[3];
+                        var info=document.getElementById("informacion") ;
+                        info.innerHTML="<h4>Modelo:Cobra</h4><h4>Motor:V8 450 cc</h4>"; 
+                        break;
+                }
+                    
+                }
+        }
+    </script>
+</head>
+<body>
+    <div class="contenedor_producto">
+       
+        <div class="imagen_principal"> <div id="informacion"></div></div>
+        <div id="uno" class="simagen_1"></div>
+        <div id="dos" class="simagen_2"></div>
+        <div id="tres" class="simagen_3"></div>
+        <div id="cuatro" class="simagen_4"></div>
+    </div>
+    
+</body>
+</html>

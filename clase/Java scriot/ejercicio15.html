@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletin1: ejercicio15</title>
+    <script>
+        function fibonacci(){
+            var num1=1;
+            var num2=0;
+            while(num1<10000){
+                var suma=num2+num1;
+                if(suma<10000){
+                    document.write(suma);
+                    document.write("</br>");
+                }
+                num2=num1;
+                num1=suma;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h4><script>fibonacci();</script></h4>
+</body>
+</html>

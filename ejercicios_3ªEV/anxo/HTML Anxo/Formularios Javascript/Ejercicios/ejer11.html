@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function manejadorEventos(elEvento) {
+            var evento = elEvento || window.event;
+        }
+
+        function azul() {
+
+            var paraf = document.getElementById("cuadro");
+            paraf.setAttribute("Style", "background-color: blue; width: 50%; height: 50%;")
+
+        }
+
+        function verde() {
+
+            var paraf = document.getElementById("cuadro");
+            paraf.setAttribute("Style", "background-color: green; width: 50%; height: 50%;")
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div id="cuadro" style="background-color: pink; width: 50%; height: 50%;" onclick="azul()" ondblclick="verde()">
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="ejem.dtd" type="application/xml-dtd"?>
+<peliculas>
+    <pelicula>
+        <titulo></titulo>
+        <año></año>
+        <actores></actores>
+        <genero></genero>
+    </pelicula>
+</peliculas>

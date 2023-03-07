@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletin1: ejercicio7</title>
+    <script>
+        function precioentrada(edad){
+            var precio;
+            if(edad<=8){
+                precio=0;
+            }else if(edad>=9 && edad<=16){
+                precio=5;
+            }else if(edad>=17 && edad<=25){
+                precio=8;
+            }else if(edad>=26 && edad<=55){
+                precio=10;
+            }else if(edad>=56 && edad<=65){
+                precio=5;
+            }else if(edad>=66){
+                precio=0;
+            }
+            return precio;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var edad=parseInt(prompt("Introduzca su edad: "));
+        var edad2=precioentrada(edad);
+        alert("El precio de su entrada es: "+edad2+" euros");
+    </script>
+</body>
+</html>

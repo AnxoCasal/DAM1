@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Bailes.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<academia>
+    <DiferentesBailes>
+        <Baile>
+            <Nombre>Tango</Nombre>
+            <Aula>2</Aula>
+            <Plazas>22</Plazas>
+            <Profesor>Jose Nogales</Profesor>
+        </Baile>
+        <Baile>
+            <Nombre>Claque</Nombre>
+            <Aula>2</Aula>
+            <Plazas>12</Plazas>
+            <Profesor>Mario Casas</Profesor>
+        </Baile>
+    </DiferentesBailes>
+    <alumnos>
+        <estudiante>
+            <DNI>39491482-E</DNI>
+            <Nombre>Paco</Nombre>
+            <Direccion>Coia</Direccion>
+            <Telefono>652296625</Telefono>
+            <Telefono>652296625</Telefono>
+            <Fecha>2002-12-28</Fecha>
+            <Sexo>Hombre</Sexo>
+        </estudiante>
+        <estudiante>
+            <DNI>39491482-E</DNI>
+            <Nombre>anxo</Nombre>
+            <Direccion>Coia</Direccion>
+            <Telefono>652296625</Telefono>
+            <Telefono>652296625</Telefono>
+            <Fecha>2002-12-28</Fecha>
+            <Sexo>Mujer</Sexo>
+        </estudiante>
+        <estudiante>
+            <DNI>39491482-E</DNI>
+            <Nombre>anxo</Nombre>
+            <Direccion>Coia</Direccion>
+            <Telefono>652296625</Telefono>
+            <Telefono>652296625</Telefono>
+            <Fecha>2002-12-28</Fecha>
+            <Sexo>Hombre</Sexo>
+        </estudiante>
+    </alumnos>
+    <DiferentesCLases>
+        <Clases>
+            <Nombre>Tango</Nombre>
+            <DiasSemana>Lunes-Miercoles</DiasSemana>
+            <Inicio>17:00:00</Inicio>
+            <Fin>18:00:00</Fin>
+            <DNIs>39491482-E</DNIs>
+            <DNIs>32336441-E</DNIs>
+            <DNIs>39423362-E</DNIs>
+            <DNIs>39494582-E</DNIs>
+            <DNIs>39491423-E</DNIs>
+        </Clases>
+        <Clases>
+            <Nombre>Tango</Nombre>
+            <DiasSemana>Lunes-Miercoles</DiasSemana>
+            <Inicio>17:00:00</Inicio>
+            <Fin>18:00:00</Fin>
+            <DNIs>39491482-E</DNIs>
+            <DNIs>32336441-E</DNIs>
+            <DNIs>39423362-E</DNIs>
+            <DNIs>39494582-E</DNIs>
+            <DNIs>39491423-E</DNIs>
+        </Clases>
+    </DiferentesCLases>
+</academia>

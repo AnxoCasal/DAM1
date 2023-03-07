@@ -1,0 +1,21 @@
+1	select user,host from mysql.user;
+2	create user user1@localhost identified by "pass";
+3	mysql -u user1 -p; Solo a la de informacion de mysql ya que no tenemos privilegios para acceder al resto
+4	grant select on tema6.empleados to user1@localhost identified by "pass"; No me permite ejecutar el comando ya que no tengo los permisos necesarios para hacerlo, tendria que usar root para darle los pemisos
+5	Tengo acceso al la base de datos TEMA6
+6	Puedo consultar empleados pero no depart
+7	set password for user1@localhost = password("password");
+8	grant select (loc) on tema6.depart to user1@localhost identified by "password";
+9	No me permite seleccionar todos los datos de depart, solo los de la columna "LOC" ya que son los unicos a los que tengo permiso
+10	create user user2@127.0.0.1 identified by "pass2", "user3@192.168.%.%" identified by "pass3";
+11	
+15
+18
+19
+20
+22
+23
+25
+27
+28
+30

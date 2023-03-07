@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function enviar() {
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var email = document.getElementById("email").value;
+            var contraseña = document.getElementById("contraseña").value;
+            var sexo = document.getElementsByName("sexo");
+            var temas = document.getElementsByName("temas");
+            var paragrafos = document.getElementsByTagName("p");
+            var seleccionado1 = false;
+            var seleccionado2 = false;
+            var paragrafo3 = document.getElementById("email error");
+            paragrafo3.innerHTML = "";
+
+            for (var i = 0; i < paragrafos.length; i++) {
+                paragrafos[i].innerHTML = "";
+            }
+
+            for (var i = 0; i < sexo.length; i++) {
+                if (sexo[i].checked) {
+                    seleccionado1 = true;
+                }
+            }
+
+            for (var i = 0; i < temas.length; i++) {
+                if (temas[i].checked) {
+                    seleccionado2 = true;
+                }
+            }
+
+            if (nombre == "" && apellido == "" && email == "" && contraseña == "" && seleccionado1 == false && seleccionado2 == false) {
+
+                alert("NINGUN CAMPO RELLENADO");
+
+            } else {
+                if (nombre == "") {
+
+                    var paragrafo = document.getElementById("nombre error");
+                    paragrafo.innerHTML = "DEBE RELLENAR ESTE CAMPO"
+
+                }
+
+                if (apellido == "") {
+
+                    var paragrafo2 = document.getElementById("apellido error");
+                    paragrafo2.innerHTML = "DEBE RELLENAR ESTE CAMPO"
+
+                }
+
+                if (email == "") {
+
+                    var paragrafo3 = document.getElementById("email error");
+                    paragrafo3.innerHTML = "DEBE RELLENAR ESTE CAMPO"
+
+                } else {
+
+                    var paragrafo3 = document.getElementById("email error");
+
+                    if (!(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(email))) {
+
+
+                        paragrafo3.innerHTML = "CORREO INVALIDO";
+
+                    }
+
+
+
+                }
+
+                if (contraseña == "") {
+
+                    var paragrafo4 = document.getElementById("contraseña error");
+                    paragrafo4.innerHTML = "DEBE RELLENAR ESTE CAMPO"
+
+                }
+
+                if (seleccionado1 == false) {
+
+                    var paragrafo5 = document.getElementById("sex error");
+                    paragrafo5.innerHTML = "DEBE RELLENAR ESTE CAMPO"
+
+                }
+
+                if (seleccionado2 == false) {
+
+                    var paragrafo6 = document.getElementById("temas error");
+                    paragrafo6.innerHTML = "DEBE RELLENAR ESTE CAMPO"
+
+                }
+            }
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        Rellene los siguientes datos: <br> <br>
+
+        Nombre: <input type="text" id="nombre"> <br>
+        <p id="nombre error" style="color: red;"></p>
+
+        Apellidos: <input type="text" id="apellido"> <br>
+        <p id="apellido error" style="color: red;"></p>
+
+        Coreo electronico: <input type="email" id="email"> <br>
+        <p id="email error" style="color: red;"></p>
+
+        Contraseña: <input type="password" id="contraseña"> <br>
+        <p id="contraseña error" style="color: red;"></p> <br>
+
+        Sexo: <br>
+        <input type="radio" name="sexo" id="hombre"> Hombre <br>
+        <input type="radio" name="sexo" id="mujer"> Mujer <br>
+        <p id="sex error" style="color: red;"></p> <br>
+
+        Interesado en los siguientes temas: <br>
+        <input type="checkbox" name="temas" id="musica"> Musica <br>
+        <input type="checkbox" name="temas" id="deportes"> Deportes <br>
+        <input type="checkbox" name="temas" id="cine"> Cine <br>
+        <input type="checkbox" name="temas" id="libros"> Libros <br>
+        <input type="checkbox" name="temas" id="ciencia"> Ciencia <br>
+        <p id="temas error" style="color: red;"></p><br>
+
+        <input type="button" value="Enviar formulario" onclick="enviar()">
+    </form>
+</body>
+
+</html>

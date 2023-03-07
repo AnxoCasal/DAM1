@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculo() {
+            var precio = document.getElementById("precio").value;
+            var cantidad = document.getElementById("cantidad").value;
+            var descuento = document.getElementById("descuento").value;
+            var iva = document.getElementById("iva").value;
+            var lista = document.getElementById("lista");
+            var envio = lista.options[lista.selectedIndex].value;
+            if (precio.length == 0 || precio == null || cantidad.length == 0 || cantidad == null || descuento.length == 0 || descuento == null || iva.length == 0 || iva == null) {
+                alert("Los campos no pueden estar vacios");
+            } else {
+
+                if (envio == 1) {
+                    var precioenvio = 0;
+                } else if (envio == 2) {
+                    var precioenvio = 5;
+                } else if (envio == 3) {
+                    var precioenvio = 8;
+                }
+
+                var precio = (precio*(1+iva/100)*cantidad)-descuento+precioenvio;
+
+                alert("El precio total del envío es: " + precio);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h3>Rellena el formulario:</h3>
+    Precio:
+    <input type="text" id="precio" maxlength="5" size="3"><br><br>
+    Cantidad
+    <input type="text" id="cantidad" maxlength="5" size="3"><br><br>
+    Descuento
+    <input type="text" id="descuento" maxlength="5" size="3"><br><br>
+    Iva
+    <input type="text" id="iva" maxlength="3" size="3">
+    % <br> <br>
+
+    Metodo de envio:
+    <select name="asunto" size="1" id="lista" onchange="valor()">
+        <option value="1">Recoger en tienda</option>
+        <option value="2">Correos</option>
+        <option value="3">Seur</option>
+    </select>
+
+    <br><br>
+
+    <input type="button" value="Calcular precios" onclick="calculo()">
+
+</body>
+
+</html>

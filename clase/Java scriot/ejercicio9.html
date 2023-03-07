@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletin1: ejercicio9</title>
+    <script>
+        function premio(edad){
+            var premio;
+            if(edad>=75 && edad<=80){
+                premio=0.05*edad;
+            }else{
+                premio=0;
+            }
+            return premio;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var edad=parseInt(prompt("Introduzca su edad abuelo: "));
+        var premio2=premio(edad);
+        if(premio2==0){
+            alert("No está dentro de la edad permitida para jugar aquí..lo sentimos");
+        }else{
+            alert("El premio por obtener usted bingo es: "+premio2+" euros");
+        }
+    </script>
+</body>
+</html>

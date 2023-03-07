@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mostrar() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+            var text3 = document.getElementById("text3").value;
+            var text4 = document.getElementById("mensaje").value;
+            const fecha = new Date();
+            const dia = fecha.getDate();
+            const mes = fecha.getMonth();
+            const año = fecha.getFullYear();
+            if (text1.length == 0 || text1 == null || text2.length == 0 || text2 == null || text3.length == 0 || text3 == null || text4.length == 0 || text4 == null) {
+                alert("No puede haber campos vacios");
+            } else {
+                alert("El mensaje " + text4 + " fue enviado por " + text1 + ", " + text2 + ". Su email es: " + text3 + ". Enviado el "+ dia + "/" +  mes + "/" +  año);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+
+        <h3>Rellene el siguiente formulario</h3>
+
+        <h3>Nombre:</h3>
+        <input type="text" name="nombre" id="text1">
+
+        <h3>Email:</h3>
+        <input type="text" name="nombre" id="text2">
+
+        <h3>Telefono:</h3>
+        <input type="text" id="text3">
+
+        <h3>Mensaje:</h3>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+
+        <br><br>
+        <input type="button" value="Enviar formulario" onclick="mostrar()">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedido ordenid="889923" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pedido.xsd">
+    <cliente>Roberto Castro</cliente>
+    <envio>
+        <direccion>Principe 17</direccion>
+        <ciudad>36202 Vigo</ciudad>
+        <pais>España</pais>
+    </envio>
+    <articulo>
+        <descripcion>Vela aromática</descripcion>
+        <nota>Edición Espacial</nota>
+        <unidades>1</unidades>
+        <precio>10.90</precio>
+    </articulo>
+    <articulo>
+        <descripcion>Espejo de bolso</descripcion>
+        <unidades>1</unidades>
+        <precio>9.90</precio>
+    </articulo>
+</pedido>

@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletin1: ejercicio6</title>
+    <script>
+        function multiplo(numero1,numero2){
+            if(numero1%numero2==0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var numero1=prompt("Introduzca un número entero: ");
+        var numero2=prompt("Introduzca otro número entero: ");
+        if(multiplo(numero1,numero2)){
+            alert("El número "+numero1+" es múltiplo de "+numero2);
+        }else{
+            alert("El número "+numero1+" no es múltiplo de "+numero2); 
+        }
+    </script>   
+</body>
+</html>

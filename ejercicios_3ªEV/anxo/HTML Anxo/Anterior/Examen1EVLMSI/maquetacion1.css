@@ -1,0 +1,33 @@
+h1{
+    text-align: center;
+}
+body{
+    width: 80%;
+    margin-left: 10%;
+}
+#datos{
+    width: 25%;
+}
+#principal{
+    width: 60%;
+    position: absolute; left: 30%; top: 6%;
+}
+
+#contenido li{
+    float: left;
+    width: 33%;
+    list-style: none;
+    list-style-position: outside;
+    position: relative; right: 40px;
+}
+#datos li:hover{
+    font-family: Verdana;
+    font-size: 1em;
+    color: #aaa;
+}
+.mas{
+    visibility: hidden;
+}
+#leermas:hover .mas{
+    visibility: visible;
+}

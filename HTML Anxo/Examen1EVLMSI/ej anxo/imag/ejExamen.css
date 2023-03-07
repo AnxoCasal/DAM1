@@ -1,0 +1,40 @@
+*{
+    background-color: antiquewhite;
+    font-family: Verdana;
+    border
+}
+input{
+    background-color: white;
+}
+textarea{
+    background-color: white;
+}
+footer{
+    text-align: center;
+}
+#boton{
+    width: 20%;
+}
+h1{
+    text-align: center;
+}
+#primero{
+width: 33%;
+}
+#segundo{
+ width: 33%;
+ vertical-align: top;
+}
+#tercero{
+ width: 33%;
+}
+#cuarto{
+width: 50%;
+}
+#quinto{
+width: 50%;
+text-align: center;
+}
+img{
+text-align: center;
+}

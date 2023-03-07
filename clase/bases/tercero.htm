@@ -1,0 +1,439 @@
+<html><head><meta charset="utf-8"/><title>Casal Rodríguez Anxo.sql</title><style>.fuente{font-family: 'Lucida Console';font-size:13px;}
+.azul{background-color:#bdd0ef;color:#000;padding: 7px 5px 7px 10px;}
+.verde{background-color:#91ffb3;color:#000;padding: 7px 5px 7px 10px;}
+.naranja{background-color:#f9d284;color:#000;padding: 7px 5px 7px 10px;}
+.amarillo{background-color:#fafcd1;color:#000;padding: 7px 5px 7px 10px;}
+.rojo{background-color:#f9b9b6;color:#000;padding: 7px 5px 7px 10px;}
+.rojoErrorSolu{background-color:#e4afaf;color:#000;padding: 7px 5px 7px 10px;}
+.violeta{background-color:#c6bcff;color:#000;padding: 7px 5px 7px 10px;}
+.multi{background-color:#88f;}
+.enunciado{background-color:ddd;margin-top:20px;padding:6px;}
+.margen{margin-left:30px;padding:10px;}
+.margenver{margin-top: 5px;margin-bottom: 3px;}
+.nomargen{margin:0px;}
+.pocomargen{margin:5px;}
+.pocopadding{padding:4px 6px 4px 6px;}
+.titulo{}
+.tituloCorregido{background-color:#007d3c;color:#fff;padding: 5px 0 5px 10px;}
+.tituloCopiado{color:#a00;}
+.tituloMedioCopiado{color:#00a;}
+.formatoIncorrecto{color:#0aa;}
+.formatoMedioIncorrecto{color:#a0a;}
+.formatoUnPocoIncorrecto{color:#aa0;}
+.formatoEntregaFueraPlazo{color:#777}
+.mensajeGeneral{color:#000;background-color:#ffff00;}
+.margenTop{margin-top:15px}
+.boton{background-color:#fff;padding:0 5px;opacity:0.1;cursor:pointer;}
+.boton:hover{opacity:0.8;}
+</style>
+<script>
+function copyJavacript(id) {
+var x = document.getElementsByClassName(id);
+    var textArea = document.createElement('textarea');
+	var cad=' ';
+var i;
+for (i = 0; i < x.length; i++) {
+	cad=cad+x[i].textContent+'\n';
+} 
+textArea.value = cad;
+    document.body.appendChild(textArea); 
+    textArea.select(); 
+    var successful = document.execCommand('copy'); 
+    document.body.removeChild(textArea); 
+}
+</script>
+<script>
+function copyJavacripTipoR(id, subid) {
+var x = document.getElementsByClassName(id);
+ var textArea = document.createElement('textarea');
+	var cad=' ';
+var i, j;
+for (i = 0; i < x.length; i++) {
+var xx = x[i].getElementsByClassName('respu');
+for (j = 0; j < xx.length; j++) {
+cad=cad+xx[j].textContent+';';
+} 
+} 
+textArea.value = cad;
+    document.body.appendChild(textArea); 
+    textArea.select(); 
+    var successful = document.execCommand('copy'); 
+    document.body.removeChild(textArea); 
+}
+</script>
+<script>
+function copyJavacripTipoS(id, subid) {
+var x = document.getElementsByClassName(id);
+ var textArea = document.createElement('textarea');
+	var cad=' ';
+var i, j;
+for (i = 0; i < x.length; i++) {
+var xx = x[i].getElementsByClassName('soluc');
+for (j = 0; j < xx.length; j++) {
+cad=cad+xx[j].textContent+';';
+} 
+} 
+textArea.value = cad;
+    document.body.appendChild(textArea); 
+    textArea.select(); 
+    var successful = document.execCommand('copy'); 
+    document.body.removeChild(textArea); 
+}
+</script>
+</head><body>
+<h2 class='titulo margenver'>Casal Rodríguez Anxo</h2>
+<h2 class='formatoEntregaFueraPlazo margenver'> <span style='margin-left:30px;font-size:18px;';> Entrega fuera de plazo</span></h2>
+
+
+<div class='enunciado'>
+1: Muestra los puntos como el número entero superior al valor obtenido
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(0)'> 1</button>   <br>
+<div class='0'>&nbsp; select ceil (puntos) as 'alias1' from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+2: Obtén el valor entero inmediatamente inferior de los minutos jugados
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(1)'> 2</button>   <br>
+<div class='1'>&nbsp; select floor (minutos) as 'alias1' from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+3: Haya el número de valoraciones distintas
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(2)'> 3</button>   <br>
+<div class='2'>&nbsp; select count (*) as 'alias1' from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+4: Calcula en la misma sentencia tres valores aleatorios
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(3)'> 4</button>   <br>
+<div class='3'>&nbsp; select rand () as 'alias1', rand () as 'alias2', rand () as 'alias3'</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+5: Redondea con dos decimales el valor de minutos de los jugadores
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(4)'> 5</button>   <br>
+<div class='4'>&nbsp; select round (minutos, 2) as 'alias1' from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+6: Trunca un número aleatorio a tres decimales
+</div>
+
+<div class=' rojo fuente'>
+ error: <button class='boton' onclick='copyJavacript(5)'> 6</button> <button class='boton' onclick='copyJavacripTipoR(5)'>6 R</button> <button class='boton' onclick='copyJavacripTipoS(5)'>6 S</button> 
+<div class='5 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>6*/</span><span class='respu'>select round(rand(), 3) as "nun truncado"</span></div>
+<div class='5 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;/* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;margin-left:2px;'>6*/</span><span class='soluc'>Select truncate(rand(), 3) as "nun truncado"</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+7: Obtener el nombre, los minutos y el entero superior a los minutos de los jugadores.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(6)'> 7</button>   <br>
+<div class='6'>&nbsp; select nombre, minutos, ceil (minutos) as 'alias1' from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+8: La siguiente lista son los posibles dorsales de los jugadores: 33, 32, 44, 22, 24, 42, 34, 4, 25 y 19. Como escogerías el dorsal más alto, y el más bajo. 
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(7)'> 8</button>   <br>
+<div class='7'>&nbsp; select greatest (33, 32, 44, 22, 24, 42, 34, 4, 25, 19) as 'alias1', least (33, 32, 44, 22, 24, 42, 34, 4, 25, 19) as 'alias2'</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+9: Obtén de dos formas diferentes los jugadores que tengan un cinco como parte entera de los rebotes
+</div>
+
+<div class=' naranja fuente'>
+ regular: <button class='boton' onclick='copyJavacript(8)'> 9</button> <button class='boton' onclick='copyJavacripTipoR(8)'>9 R</button> <button class='boton' onclick='copyJavacripTipoS(8)'>9 S</button> 
+<div class='8 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>9*/</span><span class='respu'>select nombre, rebotes, floor(rebotes) as forma1 from jugadores where rebotes like"5%"</span></div>
+<div class='8 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;  /* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;'>9*/</span><span class='soluc'>Select nombre, rebotes, truncate (rebotes, 0) as "forma 1", floor(rebotes) as "forma 2" from jugadores where floor(rebotes)=5</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+10: Como se podría dada una lista devolver el primer valor no nulo. Pon un ejemplo.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(9)'> 10</button> 
+<div class='9'>&nbsp; select coalesce (null, null, 1, 2, 3, null) as 'alias1'</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+11: Calcula el valor medio de todos los partidos jugados y el número de jugadores que los han jugado.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(10)'> 11</button>   <br>
+<div class='10'>&nbsp; select avg (partidos) as 'alias1', count (*) as 'alias2' from jugadores</span></div>
+<div class=' 10'>&nbsp; &nbsp;Otra solución: Select avg(partidos) as "valor medio", count(*) as "num jugadores" from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+12: Haya la suma de los partidos así como el mayor número de partidos y el menor.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(11)'> 12</button>   <br>
+<div class='11'>&nbsp; select sum (partidos) as 'alias1', max (partidos) as 'alias2', min (partidos) as 'alias3' from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+13: Obtén con un con redondeo a 2 decimales el mayor de los siguientes valores de los jugadores: puntos/5, rebotes/2 o asistencias
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(12)'> 13</button>   <br>
+<div class='12'>&nbsp; select round (greatest ( (puntos/5), (rebotes/2), asistencias), 2) as 'alias1' from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+14: Obtén el nombre de los jugadores en mayúsculas, el numero de caracteres que tiene su nombre y los 5 primeros caracteres de su nombre
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(13)'> 14</button>   <br>
+<div class='13'>&nbsp; select upper (nombre) as 'alias1', char_length (nombre) as 'alias2', left (nombre, 5) as 'alias3' from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+15: Haya la representación en binario de la longitud del nombre de los jugadores
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(14)'> 15</button>   <br>
+<div class='14'>&nbsp; select bin (char_length (nombre) as 'alias1' from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+16: Devuelve en una única columna la cadena "El jugador " junto el nombre del jugador y la cadena al final " jugo en los Lakers":
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(15)'> 16</button>   <br>
+<div class='15'>&nbsp; select concat (el jugador, nombre, jugo en los lakers) as 'alias1' from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+17: Devuelve los nombres de los jugadores con las "as" substituida por 1 y los espacios por guiones bajos
+</div>
+
+<div class=' rojo fuente'>
+ error: <button class='boton' onclick='copyJavacript(16)'> 17</button> <button class='boton' onclick='copyJavacripTipoR(16)'>17 R</button> <button class='boton' onclick='copyJavacripTipoS(16)'>17 S</button> 
+<div class='16 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>17*/</span><span class='respu'>select replace(nombre, 'a', '1') from jugadores</span></div>
+<div class='16 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;/* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;margin-left:2px;'>17*/</span><span class='soluc'>Select replace(replace(nombre, " ", "_"), "a", 1) as "nombre cambiado" from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+18: Devuelve los jugadores cuya segunda letra del nombre sea igual a la penúltima
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(17)'> 18</button> 
+<div class='17'>&nbsp; select nombre, substring (nombre, 2, 1), substring (reverse (nombre), 2, 1) from jugadores where substring (nombre, 2, 1)=substring (reverse (nombre), 2, 1)</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+19: Obtén la fecha y hora actual
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(18)'> 19</button> 
+<div class='18'>&nbsp; select now (), current_time, current_date</span></div>
+<div class=' 18'>&nbsp; &nbsp;Otra solución: Select now() as "fecha más hora", current_date() as "fecha", current_time() as "hora"</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+20: Obtén el nombre del día, mes y el año de la fecha actual 
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(19)'> 20</button>   <br>
+<div class='19'>&nbsp; select dayname (now (), month (now (), year (now ()</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+21: Consigue por separado las horas, minutos y segundos actuales
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(20)'> 21</button>   <br>
+<div class='20'>&nbsp; select hour (now (), minute (now (), second (now ()</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+22: Obtén la fecha actual y la fecha actual más un día
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(21)'> 22</button> 
+<div class='21'>&nbsp; select date_add (now (), interval 1 day)</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+23: Obtén la fecha actual con el siguiente formato: Hoy es el día [día] de mes [mes] del año [año]
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(22)'> 23</button> 
+<div class='22'>&nbsp; select concat (hoy es el dia, dayofmonth (now (), del mes, month (now (), del ano, year (now () )</span></div>
+<div class=' 22'>&nbsp; &nbsp;Otra solución: SELECT date_format(now(), 'Hoy es el día %d del mes %m del año %Y') as fecha</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+24: Obtén la hora actual con el siguiente formato: la hora es [hora] y los minutos [minutos]
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(23)'> 24</button>   <br>
+<div class='23'>&nbsp; select concat (la hora es, hour (now (), y los minutos, minute (now () )</span></div>
+<div class=' 23'>&nbsp; &nbsp;Otra solución: SELECT time_format(now(), 'La hora es %H y los minutos %i') as "horas y minutos"</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+25: Compara las cadenas "abcdef" y "abcDEF" de forma sensible y no sensible al caso
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(24)'> 25</button> 
+<div class='24'>&nbsp; select abcdef=abcdef, abcdef=binary abcdef</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+26: Ejecuta la sentencia: SELECT BENCHMARK(100000000,ENCODE('Hola','Adios'));. ¿Qué  indica el resultado?
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(25)'> 26</button> 
+<div class='25'>&nbsp; indica que se tarda 9, 423 segundos en realizar 100000000 veces la sentencia encode (hola, adios)</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+27: Obtén el identificador de conexión actual, el usuario actual y el numero de filas obtenidas en la última sentencia select.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(26)'> 27</button>   <br>
+<div class='26'>&nbsp; select connection_id (), current_user (), found_rows ()</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+28: Cifra el nombre del jugador como si fuese una contraseña mediante aes.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(27)'> 28</button> 
+<div class='27'>&nbsp; select nombre, aes_encrypt (nombre, pas) from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+29: Descifra el nombre del jugador cifrado mediante aes.
+</div>
+
+<div class=' rojo fuente'>
+ error: <button class='boton' onclick='copyJavacript(28)'> 29</button> <button class='boton' onclick='copyJavacripTipoR(28)'>29 R</button> <button class='boton' onclick='copyJavacripTipoS(28)'>29 S</button> 
+<div class='28 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>29*/</span><span class='respu'>select aes_decrypt('&lt;B#j╚:ô)1þ¢R®`╣bæ8╣f~44+¤■sB╦ëôØ', 'pas')</span></div>
+<div class='28 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;/* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;margin-left:2px;'>29*/</span><span class='soluc'>Select aes_decrypt(aes_encrypt(nombre, "pass"), "pass") as "nombre descifrado" from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+30: Comprueba que resultado obtienes cuando descifras mediante aes con la contraseña equivocada.
+</div>
+
+<div class=' rojo fuente'>
+ error: <button class='boton' onclick='copyJavacript(29)'> 30</button> <button class='boton' onclick='copyJavacripTipoR(29)'>30 R</button> <button class='boton' onclick='copyJavacripTipoS(29)'>30 S</button> ¿Por qué?<br>
+<div class='29 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>30*/</span><span class='respu'>Devuelve NULL</span></div>
+<div class='29 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;/* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;margin-left:2px;'>30*/</span><span class='soluc'>Select aes_decrypt(aes_encrypt(nombre, "pass"), 32) as "contraseña errónea" from jugadores</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+31: Formatea el numero 45345234.435 a 4 decimales
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(30)'> 31</button>   <br>
+<div class='30'>&nbsp; select format (45345234.435, 4)</span></div>
+</div>
+
+<br><div style='font-size:17pt;padding: 3px 5px;margin: 0;color:#000;background-color:#5f5;width:50%;'>Correctas: 26.0</div>
+<div style='font-size:17pt;padding: 3px 5px;margin: 0;color:#000;background-color:#ffd284;width:50%;'>Regulares: 1.0</div>
+<div style='font-size:17pt;padding: 3px 5px;margin: 0;color:#000;background-color:#ff9999;width:50%;'>Incorrectas: 4.0</div>
+<div style='font-size:25pt;padding: 5px 5px;margin: 20px 0 120px 0;color:#fff;background-color:#5a5;'>Puntos totales= 8.6  Fuera de plazo *0.7 =6.02  Puntos Finales = 6.1</div>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="CentroSalud">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="Profesionales">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Medico" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="ID">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:pattern value="\d{5}"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="Nombre" type="xs:string"></xs:element>
+                                        <xs:element name="Especialidad" type="xs:string"></xs:element>
+                                        <xs:element name="Sala" type="xs:integer"></xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Pacientes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Enfermo" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="DNI">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="\d{8}[A-Z]"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="NSS" type="xs:integer"></xs:element>
+                                        <xs:element name="TLF" maxOccurs="unbounded">
+                                            <xs:simpleType>
+                                                <xs:restriction  base="xs:string">
+                                                    <xs:pattern value="\d{3}[-]\d{3}[-]\d{3}"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="Nacimiento" type="xs:date"></xs:element>
+                                        <xs:element name="Sexo">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="(Hombre|Mujer)"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Horario">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Citas" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Fecha" type="xs:date"></xs:element>
+                                        <xs:element name="MedicoID">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:pattern value="\d{5}"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="PacienteDNI">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="\d{8}[A-Z]"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="Tratamiento" type="xs:string" maxOccurs="unbounded"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

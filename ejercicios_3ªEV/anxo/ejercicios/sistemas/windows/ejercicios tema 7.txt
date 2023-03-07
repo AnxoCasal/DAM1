@@ -1,0 +1,101 @@
+ejer1
+
+cd /users/%username%
+type null > info.txt
+echo %OS% >> info.txt
+echo %NUMBER_OF_PROCESSORS% >> info.txt
+
+ejer2
+
+setx almacen C:\Users\anxo\almacen
+
+ejer3
+
+prompt %username%@%computername%: %cd%
+
+ejer4
+
+a)
+
+en defraggler, en la pestaña de settings > schedule, podremos seleccionnar un disco y programar desfragmentaciones 
+rutinarias cada cierto periodo de tiempo. Entonces seleccionaremos el disco C:, periodo semanal y viernes a la 1:00 AM
+
+b)
+
+cd /
+mkdir tempt
+net user manolo 12345678 /add
+
+en el interfaz grafico accedemos a la carpeta y relizamos click derecho > propiedades > 
+seguridad > opciones avanzadas > agregar > seleccionar una entidad > escribimos el nombre del usuario > 
+seleccinamos que permisos dar o que permisos revocar
+
+en la ruta C:\WINDOWS\system32 encontraremos la aplicacion del paint, aqui relizaremos el mismo proceso que con las carpetas y le quitaremos los permisos de ejecucion
+
+ejer5
+
+directiva de seguridad local > directivas locales > asignacion de derechos de usuarios > cambiar la hora del sistema >
+quitar todos los usuarios menos el administrador
+
+directiva de seguridad local > directivas locales > opciones de seguridad > Apagado: permitir apagar el sistema sin tener que iniciar sesion >
+deshabilitar
+
+editor de directivas de grupo local > configuracion de usuario > plantillas administrativas> 
+panel de control > personalizacion > impedir cambiar el fondo de pantalla > habilitar
+
+ejer6
+
+Estado de cuentas de invitado: da la opcion de deshabilitar la opcion de iniciar sesion como invitado dando asi más seguridad al equipo
+Permitir desacoplamiento sin tener que iniciar sesion: Esta configuración de seguridad determina si un equipo portátil se puede desacoplar sin tener que iniciar sesión. 
+
+Cargar y descargar controladores de dispositivo: da la opcion de dar o quitar permisos a los usuarios sobre la instalacion de controladores de dispositivos hardware para asi aumentar la seguridad
+Aumentar el espacio de trabajo de un proceso: Permite decidir quien puede asignar el espacio de memoria ram usada por un programa
+
+Quitar programas: Habilita o deshabilita la funcion de desinstalar promgramas desde el panel de control
+Ocular configuracion de pantalla: Quita la pestaña de configuracion de pantalla del panel de control para que no sea accesible
+
+
+ejer7
+
+Fax: sirve para enviar y recibir faxes con los recursos disponibles del equipo y red, depende de "Cola de impresion", "RPC" y "Telefonia". No esta funcionando en estos momentos. Servicio de red
+Plug and play: Habilita un equipo para que reconozca y adapte los cambios de hardware con el menor esfuerzo por parte del usuario, no depende de otros servicios.Si esta ejecutandose. Sistema Local
+MYSQL: Da acceso y permite crear bases de datos tanto en el sistema local como en otros de la misma red, no depende de otros servicios. Esta en ejecucion como parte del sistema local.
+
+
+ejer8
+
+a)
+assoc .SO=archivoSO
+ftype archivoSO=%systemroot%/notepad.exe
+
+b)
+
+Barras de tareas y navegacion: Taskbar and navigation
+
+Reproduccion automatica: Autoplay
+
+Idioma/Region: Language/Region
+
+Mouse/Teclado: Muse/keyboard
+
+Centro de accesibilidad: Ease of Access Center
+
+Opciones del explorador de archivos (Opciones de carpeta en W7): File explorer options
+
+Programas predeterminados: Default Programs
+
+Copias de seguridad y restauración: Backup and restore
+
+Opciones de energía: Power options
+
+Pantalla y Administrador de sonido: Display / Sound
+
+c)
+assoc %2=%1
+ftype %1=%3
+
+d)
+
+ejer 9
+
+Eraser, cortana y skype

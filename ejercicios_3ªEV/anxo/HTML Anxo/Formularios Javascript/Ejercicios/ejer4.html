@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function calculo() {
+
+            var resultado = document.getElementById("resultado");
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var opt = document.getElementsByName("opt");
+            var seleccionado = false;
+
+            for (var i = 0; i < opt.length; i++) {
+                if (opt[i].checked) {
+                    seleccionado = true;
+                    var operando = opt[i].value;
+                }
+            }
+
+            if (seleccionado == false || num1 == "" || num2 == "") {
+                alert('Rellene todos los campos');
+            } else {
+                if (operando == "suma") {
+
+                    num1 = parseInt(num1);
+                    num2 = parseInt(num2);
+                    resultado.innerHTML = "El resultado de la operación " + num1 + " + " + num2 + " = " + (num1 + num2);
+
+                } else if (operando == "resta") {
+
+                    resultado.innerHTML = "El resultado de la operación " + num1 + " - " + num2 + " = " + (num1 - num2);
+
+                } else if (operando == "multiplicacion") {
+
+                    resultado.innerHTML = "El resultado de la operación " + num1 + " X " + num2 + " = " + (num1 * num2);
+
+                } else if (operando == "division") {
+
+                    if (num2 == 0) {
+                        alert("La division por cero no es posible");
+                    } else {
+                        resultado.innerHTML = "El resultado de la operación " + num1 + " / " + num2 + " = " + (num1 / num2);
+                    }
+
+                }
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    Operando 1: <input type="number" id="num1"> <br>
+    Operando 2: <input type="number" id="num2"> <br><br>
+    <input type="radio" name="opt" id="suma" value="suma"> Suma
+    <input type="radio" name="opt" id="resta" value="resta"> Resta
+    <input type="radio" name="opt" id="multiplicacion" value="multiplicacion"> Multiplicacion
+    <input type="radio" name="opt" id="division" value="division"> Division <br> <br>
+    <div id="resultado" style="color: red;"></div><br>
+    <input type="button" value="Realizar" onclick="calculo()">
+</body>
+
+</html>

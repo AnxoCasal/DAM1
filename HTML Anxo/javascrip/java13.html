@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        var meses = new Array("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre","octubre", "noviembre", "diciembre"); 
+        var letra = prompt ("Letra a buscar")
+        var cont = 0;   
+        var cant = 0;
+        for(cont=0; cont<meses.length; cont++){
+            if(meses[cont][0]==letra){
+                cant++;
+            }
+        }
+        window.alert(cant);
+        window.alert(cont);
+    </script>
+</body>
+</html>

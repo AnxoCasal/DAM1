@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="libros.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<libros>
+    <libro>
+        <titulo>100 años de soledad</titulo>
+        <autor>Gabriel García Márquez</autor>
+        <editorial>Grijalbo </editorial>
+        <fecha_publicacion>
+            <mes>Enero</mes>
+            <año>1990</año>
+        </fecha_publicacion>
+        <isbn>2323</isbn>
+        <precio moneda="Euro">30</precio>
+    </libro>
+    <libro>
+        <titulo>La reina del Sur</titulo>
+        <autor>Arturo Pérez Reverte</autor>
+        <editorial>Alfaguara </editorial>
+        <fecha_publicacion>
+            <mes>Marzo</mes>
+            <año>1995</año>
+        </fecha_publicacion>
+        <isbn>2326</isbn>
+        <precio moneda="Euro">20</precio>
+    </libro>
+</libros> 
+                    

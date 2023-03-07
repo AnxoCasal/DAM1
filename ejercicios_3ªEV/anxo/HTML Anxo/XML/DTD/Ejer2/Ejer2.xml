@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="ejer2.dtd" type="application/xml-dtd"?>
+<listapedidos>
+    <pedido>
+        <numserie>
+
+        </numserie>
+        <cantidad>
+            
+        </cantidad>
+        <peso>
+            
+        </peso>
+    </pedido>
+</listapedidos>

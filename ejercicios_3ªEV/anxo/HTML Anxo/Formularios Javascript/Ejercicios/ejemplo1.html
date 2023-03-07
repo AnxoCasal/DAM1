@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prueba</title>
+    <script>
+        function lista() {
+            var x = document.forms['formulario']['nombre'].value;
+            var lista = document.getElementById("lista");
+            for (var i = 0; document.getElementsByTagName("li").length; i++) {
+                if (document.getElementsByTagName("li")[i] == x) {
+                    alert("El campo no puede ser repetido");
+                    return false;
+                }
+            }
+            if (x == "") {
+                alert("El campo no puede estar vacio");
+                return false;
+            } else {
+                var elemento = document.createElement("li");
+                var y = document.createTextNode(x);
+                elemento.appendChild(y);
+                lista.appendChild(elemento);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="formulario" action="" method="post">
+        Nombre: <input type="text" name="nombre">
+        <input type="button" value="Enviar formulario" onclick="return lista()">
+    </form>
+    <ol id="lista">
+    </ol>
+</body>
+
+</html>

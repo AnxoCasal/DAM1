@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ejercicio2DOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            .oculto { display: none; }
+            .visible { display: inline; }
+        </style>
+        <script type="text/javascript">
+            function muestra() {
+                var elemento = document.getElementById("adicional");
+                elemento.className = "visible";
+                var enlace = document.getElementById("enlace");
+                enlace.className = "oculto";
+            }
+        </script>
+    </head>
+    <body>
+        <p id="texto">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim
+        vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec,
+        commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at,
+        pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede.
+            <span id="adicional" class="oculto">
+            Nullam sit amet nisl elementum elit convallis
+            malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis
+            pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere
+            ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis
+            scelerisque. Donec lacus neque, vehicula in, eleifend vitae, venenatis ac, felis. Donec
+            arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean
+            vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent id
+            metus.
+            </span>
+        </p>
+        <a id="enlace" href="#" onclick="muestra();">Seguir leyendo</a>
+    </body>
+</html>

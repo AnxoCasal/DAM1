@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletin 1: ejercicio13</title>
+    <script>
+        function letranombres(nombres,letra){
+            for(var i=0;i<nombres.length;i++){
+                if(nombres[i][0]==letra){
+                    document.write(nombres[i]);
+                    document.write("<br>");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var nombres=[];
+        do{
+            var nombre=prompt("Introduzca un nombre a la lista:");
+            nombres.push(nombre);
+        }while(nombre!="");
+        var letra=prompt("Introduzca una letra:");
+        letranombres(nombres,letra);
+    </script>
+    
+</body>
+</html>

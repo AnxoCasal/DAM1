@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script type="text/javascript">
+        function mantener(){
+            this.src="/rojo.jpg";
+        }
+        function soltar(){
+            this.src="/azul.jpg";
+        }
+
+        window.onload = function (){
+            var imagen = document.getElementById("azul"); 
+            imagen.addEventListener('mousedown',mantener,false);
+            imagen.addEventListener('mouseup',soltar,false);
+        }
+
+    </script>
+</head>
+<body>
+     <img id="azul" src="azul.jpg" alt="azul">
+</body>
+</html>

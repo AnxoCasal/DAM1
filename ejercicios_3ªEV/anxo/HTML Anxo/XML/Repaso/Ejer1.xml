@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Esquema1.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<casino>
+    <Apuestas>
+        <Partida Num="4">
+            <Juego>Blackjack</Juego>
+            <Premio>Si</Premio>
+            <Importe>11241.4141</Importe>
+            <Fecha>2002-12-12</Fecha>
+        </Partida>
+        <Partida Num="5">
+            <Juego>Ruleta</Juego>
+            <Premio>Si</Premio>
+            <Importe>12</Importe>
+            <Fecha>2002-12-12</Fecha>
+        </Partida>
+        <Partida Num="2">
+            <Juego>Tragaperras</Juego>
+            <Premio>No</Premio>
+            <Fecha>2002-12-12</Fecha>
+        </Partida>
+    </Apuestas>
+</casino>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        var num = prompt ("Cuantos numeros vas a introducir");
+        num = parseFloat(num);
+        var suma = 0;
+        var cont = 0;
+        do{
+            var num2 = prompt ("Dame un numero");
+            num2= parseFloat(num2);
+            suma= num2 + suma;
+            cont++
+        }while (cont<num);
+        window.alert(suma);
+    </script>
+</body>
+</html>

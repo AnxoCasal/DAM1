@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ejercicio3DOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function anade() {
+                var elemento = document.createElement("li");
+                var texto1=prompt("Introduzca elemento a añadir");
+                var texto = document.createTextNode(texto1);
+                elemento.appendChild(texto);
+                var lista = document.getElementById("lista");
+                lista.appendChild(elemento);
+                /*var nuevoElemento = "<li>Texto de prueba</li>";
+                lista.innerHTML = lista.innerHTML + nuevoElemento;*/
+            }
+               
+            function borrar(){
+                var producto=prompt("¿Que producto quiere eliminar de la lista?");
+                var listado=document.getElementsByTagName("li");
+                for(i=0;i<listado.length;i++){
+                    if(listado[i].innerHTML===producto){
+                       listado[i].parentNode.removeChild(listado[i]);
+                       
+                    }  
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <h3>Listado de la compra:</h3>
+        <ul id="lista">
+            <li>Harina</li>
+            <li>Tomates</li>
+            <li>Fruta</li>
+            <li>Cereales</li>
+            <li>Pasta</li>
+        </ul>
+        
+        <input type="button" value="Añadir producto" onclick="anade();">
+        <input type="button" value="Borrar producto" onclick="borrar();">
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        function enviar() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+            var text3 = document.getElementById("mensaje").value;
+            if(text1.length == 0 || text1 == null || text2.length == 0 || text2 == null || text3.length == 0 || text3 == null){
+                alert("Los campos no pueden estar vacios");
+            }
+        }
+
+        function valor() {
+            var lista = document.getElementById("lista");
+            var mensaje = document.getElementById("mensaje");
+            var msg = lista.options[lista.selectedIndex].text;
+            mensaje.value=msg;
+        }
+
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <h3>Nombre:</h3>
+        <input type="text" name="nombre" id="text1">
+        <h3>Telefono:</h3>
+        <input type="text" id="text2">
+        <h3>Asunto:</h3>
+        <select name="asunto" size="1" id="lista" onchange="valor()">
+            <option value="1">Solicitar informacion</option>
+            <option value="2">Poner una queja</option>
+            <option value="3">Otros</option>
+        </select>
+        <h3>Escribir un mensaje:</h3>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+        <h3>Pulse para enviar</h3>
+        <input type="button" value="Enviar formulario" onclick="enviar()">
+    </form>
+</body>
+
+</html>

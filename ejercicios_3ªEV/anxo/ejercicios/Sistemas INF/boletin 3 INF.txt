@@ -1,0 +1,33 @@
+
+
+	1º
+
+	600W / 240V = 2,5 A
+	
+	240V es la corriente que te llega, 240V es lo maximo, en españa es 220 V y 60 Hz
+
+Puedes por que hay amperios suficientes. 
+La impresora no se conecta a la fuente por lo que tmb se puede
+
+	2º 
+
+	Nos, nos faltan 150mA
+
+	3º 
+
+
+	1- Falso, estan conectados al puente Norte que es el que ofrece mayor velocidad
+	2- Falso, estan conectados a traves del DMI interface
+	3- Falso, trabaja en 64 bits
+	4- Falso, solo la L1 y la L2 en el nucleo
+	5- Falso, es al reves, son mas lentas y baratas
+	6- Falso, suelen ser SRAM
+	7- Falso, el sub-D 9 pines es para el puerto serie y el sub-D 25 pines para el series
+	8- Verdadero
+
+
+	4º
+
+
+	Formateo fisico es el realizado por el fabricante para separar el disco en sus debidas partes (blasters, sectores,etc)
+	El formateo logico es el realziado por el usuario para situar un sistema de ficheros y que los SO puedan utilizarlos.

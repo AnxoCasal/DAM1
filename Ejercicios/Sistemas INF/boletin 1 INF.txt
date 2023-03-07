@@ -1,0 +1,114 @@
+
+1. ¿Qué tipos de sistemas de numeración conoces? ¿De qué tipo es el sistema decimal?
+¿Y el binario?
+
+Posicional y no posicional. Ambos son posicionales
+
+2. Si tenemos un ADSL de 1Mbps. ¿Cuántos bytes por segundo transmitirá?
+
+1Mbps =1000000 bitsps / 8 = 125000 bytes por segundo
+
+3. Realiza las conversiones a binario, hexadecimal y octal de los siguientes números:
+
+		DECIMAL		BINARIO		HEXA	OCTAL
+
+172 = 				10101100  	AC  	25
+23(4) = 	11 		00001011	B	13
+46(7) =		34		00100010	22	42
+31(5) = 	16		00010000	10	20
+134(12) =	184		10111000	B8	270
+37,42 = 					
+131,06 =	
+
+4. Realiza las siguientes conversiones de binario, hexadecimal u octal a decimal:
+
+5. Representar los siguientes números en signo-magnitud, Ca1 y Ca2, utilizando 7 bits:
+
+6. Realiza las siguientes operaciones aritméticas: (todo en binario)
+
+
+ 1100110 
++1001011
+--------
+10110001
+
+
+ 11
++11
+---
+110
+
+
+ 1010
++1011
+-----
+10101
+
+
+  1001111
+    *0110	
+---------
+  0000000
+ 1001111
+1001111
+----------
+111011010
+
+
+ 1011
+-0101
+-----
+ 0110
+
+
+101010 / 110
+ 110	   111    
+------ 
+ 1001
+  110
+------
+  0110
+------
+     0
+
+
+
+
+7. Realiza las siguientes operaciones lógicas:
+ (FA AND 1E) OR (NOT(55)) =(11111010 AND 00011110) OR (NOT 01010101) = 00011010 OR 10101010 = 10111010
+ (D1 XOR 3A) AND 7B = (11010001 XOR 00111010) AND 01111011 = 11101011 AND 01111011 = 01101011
+ (5C OR FB) XOR (56 AND 7E) = (01011100 OR 11111011) XOR (01010110 AND 01111110)= 11111111 XOR 01010110 = 10101001
+
+8. Indica la codificación en UTF8 y UTF16 de los símbolos Unicode (en hexadecimal):
+
+
+? (U+03C0) = 0000 0011 1100 0000 = 	UTF8  11001111 10000000 = 		0xCF 0x80		
+					UTF16 00000011 11000000 = 		0x03 0xC0
+
+ß (U+03B2) = 0000 0011 1011 0010 = 	UTF8  11001110 10110010 = 		0xCE 0xB2
+					UTF16 00000011 10110010 = 		0x03 0xB2
+
+@ (U+0040) = 0000 0000 0100 0000 = 	UTF8  01000000 = 			0x40
+					UTF16 00000000 01000000	=		0x00 0x40
+
+Ü (U+00DC) = 0000 0000 1101 1100 = 	UTF8  11000011 10011100 = 		0xC3 0x9C
+					UTF16 00000000 11011100 = 		0x00 0xDC
+
+€ (U+20AC) = 0010 0000 1010 1100 = 	UTF8  11100000 10000010 11011000 = 	0xE0 0x82 0xD8
+					UTF16 00100000 10101100 =		0x20 0xAC
+
+? (U+2211) = 0010 0010 0001 0001 = 	UTF8  11100010 10001000 10010001 = 	0xE2 0x88 0x91
+					UTF16 00100010 00010001	=		0x22 0x11
+
+
+
+
+
+
+
+
+
+
+
+
+

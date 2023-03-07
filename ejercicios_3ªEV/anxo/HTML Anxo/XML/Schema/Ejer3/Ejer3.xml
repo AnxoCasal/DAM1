@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="empleado.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<empleado>
+    <Nombre>
+        Jose
+    </Nombre>
+    <Apellido>
+        Nogales
+    </Apellido>
+    <COD>
+        666
+    </COD>
+</empleado>

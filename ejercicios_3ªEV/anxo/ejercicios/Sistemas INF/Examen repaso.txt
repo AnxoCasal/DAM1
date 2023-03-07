@@ -1,0 +1,85 @@
+Examen de repaso
+
+1º
+
+a) 1001101,01 = 2^6 + 13 + 0,25 = 64 + 13 + 0,25 = 77,25
+
+b) 85 	= 01010101
+	= 125
+
+c) 465	= 100110101 = 135
+
+2º
+
+a)	110001
+	 11011
+	------
+       1001100   
+
+
+b)	110001
+	 11011
+	------
+	 10110
+
+c)	  11001
+	    101
+	  -----
+	  11001
+	11001
+	-------
+	1111101
+
+3º 
+
+a) NOT (11111011 AND 01001110) XOR 11111111 = NOT 01001010 XOR 11111111 = 10110101 XOR 11111111  = 01001010 = 4A
+
+b) (11101101 OR 10101010) AND NOT 11 = 11101111 AND 11101110 = 11101110
+
+
+
+4º 
+
+
+delta(U+0394) -> 0000 0011 1001 0100 -> 2º rango -> 11001110 10010100 -> CE 94
+
+thiuth (U+10338) -> 0001 0000 0011 0011 1000 -> 3º rango -> 11110000 10010000 10001100 10111000 -> F0 90 8C B8
+
+jeem (U+08A4) -> 0000 1000 1010 0010 -> 3º rango -> 11100000 10100010 10100100 -> E0 A2 A4
+
+
+
+5º
+
+
+16(posiciones) x 8(bus de datos) = 128 bits / 8 = 16 bytes
+
+bus de direccionamiento 2 elevado a él es la cantidad de posiciones
+
+
+6º
+
+a) FALSO. Entre el disco duro y la ram
+
+b) FALSO. Son incompatibles
+
+c) FALSO. Falta pasta termica
+
+7º
+
+
+Volumen 24 GB
+
+Fat 16
+
+30MB
+
+
+Tmñ cluster = Tamaño disco / 2^formato = 24GB / 2^16 = (3 * 2^3 * 2^30)/2^16 = 3 * 2^7 * 2^10 = 384 KB
+
+Archivo / TMÑ cluster = 30MB / 284KB = 30 * 2^20 byterçs / 3 * 2^17 bytes = 10 * 2^3 = 80 clusters 
+
+
+CLUSTER** UNIDAD MINIMA ALMACENAMIENTO Y CONJUNTO DE SECTORES
+
+

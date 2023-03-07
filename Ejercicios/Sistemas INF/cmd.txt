@@ -1,0 +1,15 @@
+
+1 dir ..
+
+2 ir /X
+
+3 dir /O:E
+
+4 dir .. /A:r
+
+5
+
+6 dir /P /S /A
+
+...
+

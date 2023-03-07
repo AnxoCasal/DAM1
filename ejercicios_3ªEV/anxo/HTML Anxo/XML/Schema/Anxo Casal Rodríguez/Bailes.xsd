@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="academia">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="DiferentesBailes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Baile"  maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="Nombre" type="xs:string"></xs:element>
+                                        <xs:element name="Profesor" type="xs:string"></xs:element>
+                                        <xs:element name="Aula">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:pattern value="\d{1}"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="Plazas">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:maxInclusive value="24"></xs:maxInclusive>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="alumnos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="estudiante"  maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="DNI">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="\d{8}[-][A-Z]"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="Nombre" type="xs:string"></xs:element>
+                                        <xs:element name="Direccion" type="xs:string"></xs:element>
+                                        <xs:element name="Telefono" type="xs:integer" maxOccurs="unbounded"></xs:element>
+                                        <xs:element name="Fecha" type="xs:date"></xs:element>
+                                        <xs:element name="Sexo">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="(Hombre|Mujer)"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DiferentesCLases">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Clases"  maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Nombre" type="xs:string"></xs:element>
+                                        <xs:element name="DiasSemana" type="xs:string"></xs:element>
+                                        <xs:element name="Inicio" type="xs:time"></xs:element>
+                                        <xs:element name="Fin" type="xs:time"></xs:element>
+                                        <xs:element name="DNIs" maxOccurs="unbounded">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="\d{8}[-][A-Z]"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

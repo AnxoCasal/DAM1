@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Instituto.dtd" type="application/xml-dtd"?>
+<listacursos>
+    <curso>
+        <alumno>
+            <DNI></DNI>
+            <Nombre></Nombre>
+            <Apellido1></Apellido1>
+            <Apellido2></Apellido2>
+            <listaAsignaturas>
+                <asignatura codigo="1">
+                    <NombreAsignatura></NombreAsignatura>
+                    <profesor>
+                        <NRP></NRP>
+                        <NombreProf></NombreProf>
+                        <ApellidoProf1></ApellidoProf1>
+                        <ApellidoProf2></ApellidoProf2>
+                    </profesor>
+                </asignatura>
+            </listaAsignaturas>
+        </alumno>
+    </curso>
+    <curso>
+        <alumno>
+            <DNI></DNI>
+            <Nombre></Nombre>
+            <Apellido1></Apellido1>
+            <listaAsignaturas>
+                <asignatura codigo="1">
+                    <NombreAsignatura></NombreAsignatura>
+                    <profesor>
+                        <NRP></NRP>
+                        <NombreProf></NombreProf>
+                        <ApellidoProf1></ApellidoProf1>
+                    </profesor>
+                </asignatura>
+                <asignatura codigo="1">
+                    <NombreAsignatura></NombreAsignatura>
+                    <profesor>
+                        <NRP></NRP>
+                        <NombreProf></NombreProf>
+                        <ApellidoProf1></ApellidoProf1>
+                        <ApellidoProf2></ApellidoProf2>
+                    </profesor>
+                </asignatura>
+            </listaAsignaturas>
+        </alumno>
+    </curso>
+</listacursos>

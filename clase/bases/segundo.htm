@@ -1,0 +1,290 @@
+<html><head><meta charset="utf-8"/><title>Casal Rodríguez Anxo.sql</title><style>.fuente{font-family: 'Lucida Console';font-size:13px;}
+.azul{background-color:#bdd0ef;color:#000;padding: 7px 5px 7px 10px;}
+.verde{background-color:#91ffb3;color:#000;padding: 7px 5px 7px 10px;}
+.naranja{background-color:#f9d284;color:#000;padding: 7px 5px 7px 10px;}
+.amarillo{background-color:#fafcd1;color:#000;padding: 7px 5px 7px 10px;}
+.rojo{background-color:#f9b9b6;color:#000;padding: 7px 5px 7px 10px;}
+.rojoErrorSolu{background-color:#e4afaf;color:#000;padding: 7px 5px 7px 10px;}
+.violeta{background-color:#c6bcff;color:#000;padding: 7px 5px 7px 10px;}
+.multi{background-color:#88f;}
+.enunciado{background-color:ddd;margin-top:20px;padding:6px;}
+.margen{margin-left:30px;padding:10px;}
+.margenver{margin-top: 5px;margin-bottom: 3px;}
+.nomargen{margin:0px;}
+.pocomargen{margin:5px;}
+.pocopadding{padding:4px 6px 4px 6px;}
+.titulo{}
+.tituloCorregido{background-color:#007d3c;color:#fff;padding: 5px 0 5px 10px;}
+.tituloCopiado{color:#a00;}
+.tituloMedioCopiado{color:#00a;}
+.formatoIncorrecto{color:#0aa;}
+.formatoMedioIncorrecto{color:#a0a;}
+.formatoUnPocoIncorrecto{color:#aa0;}
+.formatoEntregaFueraPlazo{color:#777}
+.mensajeGeneral{color:#000;background-color:#ffff00;}
+.margenTop{margin-top:15px}
+.boton{background-color:#fff;padding:0 5px;opacity:0.1;cursor:pointer;}
+.boton:hover{opacity:0.8;}
+</style>
+<script>
+function copyJavacript(id) {
+var x = document.getElementsByClassName(id);
+    var textArea = document.createElement('textarea');
+	var cad=' ';
+var i;
+for (i = 0; i < x.length; i++) {
+	cad=cad+x[i].textContent+'\n';
+} 
+textArea.value = cad;
+    document.body.appendChild(textArea); 
+    textArea.select(); 
+    var successful = document.execCommand('copy'); 
+    document.body.removeChild(textArea); 
+}
+</script>
+<script>
+function copyJavacripTipoR(id, subid) {
+var x = document.getElementsByClassName(id);
+ var textArea = document.createElement('textarea');
+	var cad=' ';
+var i, j;
+for (i = 0; i < x.length; i++) {
+var xx = x[i].getElementsByClassName('respu');
+for (j = 0; j < xx.length; j++) {
+cad=cad+xx[j].textContent+';';
+} 
+} 
+textArea.value = cad;
+    document.body.appendChild(textArea); 
+    textArea.select(); 
+    var successful = document.execCommand('copy'); 
+    document.body.removeChild(textArea); 
+}
+</script>
+<script>
+function copyJavacripTipoS(id, subid) {
+var x = document.getElementsByClassName(id);
+ var textArea = document.createElement('textarea');
+	var cad=' ';
+var i, j;
+for (i = 0; i < x.length; i++) {
+var xx = x[i].getElementsByClassName('soluc');
+for (j = 0; j < xx.length; j++) {
+cad=cad+xx[j].textContent+';';
+} 
+} 
+textArea.value = cad;
+    document.body.appendChild(textArea); 
+    textArea.select(); 
+    var successful = document.execCommand('copy'); 
+    document.body.removeChild(textArea); 
+}
+</script>
+</head><body>
+<h2 class='titulo margenver'>Casal Rodríguez Anxo</h2>
+<h2 class='formatoIncorrecto margenver'> <span style='margin-left:30px;font-size:18px;';> El formato es erróneo</span></h2>
+<h2 class='formatoEntregaFueraPlazo margenver'> <span style='margin-left:30px;font-size:18px;';> Entrega fuera de plazo</span></h2>
+
+
+<div class='enunciado'>
+23: ¿De qué juego hay, en global, más stock?
+</div>
+
+<div class=' naranja fuente'>
+ regular: <button class='boton' onclick='copyJavacript(22)'> 23</button> <button class='boton' onclick='copyJavacripTipoR(22)'>23 R</button> <button class='boton' onclick='copyJavacripTipoS(22)'>23 S</button> 
+<div class='22 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>23*/</span><span class='respu'>select nombre, stockventa+stockalquiler from juegos order by stockventa+stockalquiler desc limit 1</span></div>
+<div class='22 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;  /* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;'>23*/</span><span class='soluc'>select nombre, ifnull(stockAlquiler, 0)+ifnull(stockVenta, 0) as stock from juegos order by stock desc limit 1</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+24: Si alquilamos 3 veces cada juego ¿Cuánto dinero obtenemos por juego?. Llama a esta columna alquiler
+</div>
+
+<div class=' rojo fuente'>
+ error: <button class='boton' onclick='copyJavacript(23)'> 24</button> <button class='boton' onclick='copyJavacripTipoR(23)'>24 R</button> <button class='boton' onclick='copyJavacripTipoS(23)'>24 S</button> 
+<div class='23 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>24*/</span><span class='respu'>select nombre, precioalquiler, precioalquiler * @alquiler3 as alquiler from juegos</span></div>
+<div class='23 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;/* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;margin-left:2px;'>24*/</span><span class='soluc'>select nombre, precioAlquiler, ifnull(precioAlquiler, 0)*3 as alquiler from juegos</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+25: Si vendemos todos los juegos. ¿Con cuál obtenemos más dinero y cuanto (llama a esta columna venta)?. 
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(24)'> 25</button> 
+<div class='24'>&nbsp; select nombre, precioventa, stockventa, precioventa*stockventa as venta from juegos where precioventa order by precioventa*stockventa desc limit 1</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+26: Calcula la columna pesetasVenta y pesetasAlquiler que contengan los precios en pesetas  (euros x 166)
+</div>
+
+<div class=' naranja fuente'>
+ regular: <button class='boton' onclick='copyJavacript(25)'> 26</button> <button class='boton' onclick='copyJavacripTipoR(25)'>26 R</button> <button class='boton' onclick='copyJavacripTipoS(25)'>26 S</button> 
+<div class='25 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>26*/</span><span class='respu'>select precioAlquiler, precioAlquiler * @pesetas as pesetasalquiler, precioventa, precioventa * @pesetas as pesetasventa from juegos</span></div>
+<div class='25 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;  /* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;'>26*/</span><span class='soluc'>select precioAlquiler, precioAlquiler*166 as pesetasAlquiler, precioVenta, precioVenta*166 as pesetasVenta from juegos</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+27: Sin ejecutarlas indicar y explicar el resultado de las siguientes sentencias:
+</div>
+
+<div class='rojo'>
+Ejercicio 27 sin hacer
+</div>
+
+
+
+<div class='enunciado'>
+28: Mostrar el nombre y stock de ventas de los juegos cuyo stock de ventas no esté entre 8 y 15
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(27)'> 28</button>   <br>
+<div class='27'>&nbsp; select * from juegos where stockventa not between 8 and 15</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+29: Crear la variable stock asignándole el stock de alquiler del juego con id 6.
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(28)'> 29</button>   <br>
+<div class='28'>&nbsp; set @stock = (select stockalquiler from juegos where id = 6)</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+30: Obtén los datos de los juegos con un stock de alquiler superior al indicado en la variable stock
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(29)'> 30</button>   <br>
+<div class='29'>&nbsp; select * from juegos where stockalquiler&gt;@stock</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+31: Obtén el nombre de los juegos que tengan precio de alquiler
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(30)'> 31</button> 
+<div class='30'>&nbsp; select nombre from juegos where stockalquiler is not null</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+32: Calcula el stock total de cada juego
+</div>
+
+<div class=' naranja fuente'>
+ regular: <button class='boton' onclick='copyJavacript(31)'> 32</button> <button class='boton' onclick='copyJavacripTipoR(31)'>32 R</button> <button class='boton' onclick='copyJavacripTipoS(31)'>32 S</button> 
+<div class='31 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>32*/</span><span class='respu'>select nombre, stockventa+stockalquiler as stocktotal from juegos</span></div>
+<div class='31 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;  /* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;'>32*/</span><span class='soluc'>select nombre, ifnull(stockAlquiler, 0)+ifnull(stockVenta, 0) as stockTotal from juegos</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+33: Obtener el nombre y la columna suficiente, la cual indicara si hay suficiente stock de juegos. Se considera suficiente si la suma de los stocks es mayor o igual que 10.
+</div>
+
+<div class=' naranja fuente'>
+ regular: <button class='boton' onclick='copyJavacript(32)'> 33</button> <button class='boton' onclick='copyJavacripTipoR(32)'>33 R</button> <button class='boton' onclick='copyJavacripTipoS(32)'>33 S</button> 
+<div class='32 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>33*/</span><span class='respu'>select nombre, stockventa+stockalquiler as suma, if(stockventa+stockalquiler&gt;10, 'Suficiente', 'No suficiente') as suficiente from juegos</span></div>
+<div class='32 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;  /* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;'>33*/</span><span class='soluc'>select nombre, ifnull(stockAlquiler, 0)+ifnull(stockVenta, 0) as suma, if (ifnull(stockAlquiler, 0)+ifnull(stockVenta, 0)&gt;=10, "Suficiente", "No suficiente") as suficiente from juegos</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+34: Obtener una columna que nos indique, mediante un mensaje de texto, si no queda stock de alquileres, si este existe indicar la cantidad
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(33)'> 34</button> 
+<div class='33'>&nbsp; select nombre, if(stockalquiler&gt;0, stockalquiler, 'no queda stock') as mensaje from juegos</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+35: Obtener el nombre y la columna suficiente, la cual indicara si hay suficiente stock de juegos. Se considera suficiente si la suma de los stocks es mayor o igual que 10 de los cinco juegos con más stock
+</div>
+
+<div class=' naranja fuente'>
+ regular: <button class='boton' onclick='copyJavacript(34)'> 35</button> <button class='boton' onclick='copyJavacripTipoR(34)'>35 R</button> <button class='boton' onclick='copyJavacripTipoS(34)'>35 S</button> 
+<div class='34 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>35*/</span><span class='respu'>select nombre, stockalquiler+stockventa as stock, if(stockalquiler+stockventa&lt;10, 'suficiente', 'no suficiente') as suficiente from juegos order by stockventa+stockalquiler desc limit 5</span></div>
+<div class='34 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;  /* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;'>35*/</span><span class='soluc'>select nombre, ifnull(stockAlquiler, 0)+ifnull(stockVenta, 0) as stock, if (ifnull(stockAlquiler, 0) +ifnull(stockVenta, 0)&gt;=10, "Suficiente", "no suficiente") as suficiente from juegos order by stock desc limit 5</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+36: Visualiza tres columnas, la primera será el nombre, la segunda la plataforma y la tercera será el fabricante de la plataforma . Para PC visualizaremos Varios, para XBOX Microsoft y para el resto Sony. 
+</div>
+
+<div class='verde fuente'>
+ ok: <button class='boton' onclick='copyJavacript(35)'> 36</button> 
+<div class='35'>&nbsp; SELECT nombre, CASE plataforma When 'PC' then 'Varios' When 'XBOX' then 'Microsoft' ELSE 'Sony' END as Creadores from juegos</span></div>
+</div>
+
+
+
+<div class='enunciado'>
+37: Visualiza mediante case y de dos formas distintas: dos columnas, la primera será el nombre y la segunda será el tipo de plataforma: Para PC será ordenador, para PSP consola portátil y para el resto consola.
+</div>
+
+<div class='azul fuente'>
+ Consultas pedidas: 2  -  Respuestas: 1
+<div class='verde fuente'>
+ ok: 
+SELECT nombre, CASE plataforma When 'PC' then 'Ordenador' When 'PSP' then 'Consola Portatil' ELSE 'Consola' END as Creadores from juegos
+</div>
+
+<div class='texto fuente'>
+ 
+</div>
+
+<div class='margenTop '>
+
+Soluciones posibles
+</div>
+
+<div class='amarillo pocomargen pocopadding'>
+select nombre, CASE when plataforma="PC" then "Ordenador" when plataforma="PSP" then "Consola portatil" else "Consola" end as tipo from juegos
+</div>
+
+</div>
+
+
+
+<div class='enunciado'>
+38: Visualiza tres columnas, la primera será el nombre, la segunda será el beneficio esperado, Este beneficio será la suma del alquiler de todas las unidades de los juegos más la venta de todas las unidades. La tercera columna será la estimación que dependerá del beneficio que obtengamos: Si es mayor que 300 su valor será de rentable. Si está entre 100 y 300 será de rentabilidad media y para el resto de los casos será de rentabilidad baja.
+</div>
+
+<div class=' naranja fuente'>
+ regular: <button class='boton' onclick='copyJavacript(37)'> 38</button> <button class='boton' onclick='copyJavacripTipoR(37)'>38 R</button> <button class='boton' onclick='copyJavacripTipoS(37)'>38 S</button> 
+<div class='37 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>/*</span>Respuesta:<span style='color:#f9b9b6;;font-size:5px;'>38*/</span><span class='respu'>select nombre, (stockalquiler*precioalquiler)+(stockventa*precioventa) as beneficios, CASE When (stockalquiler*precioalquiler)+(stockventa*precioventa)&gt;300 then 'rentable' when (stockalquiler*precioalquiler)+(stockventa*precioventa) between 100 and 300 then 'rentabilidad media' else 'rentabilidad baja' END as estimacion from juegos</span></div>
+<div class='37 '>&nbsp; <span style='color:#f9b9b6;font-size:5px;'>;  /* </span>Solución:<span style='color:#f9b9b6;;font-size:5px;'>38*/</span><span class='soluc'>SELECT nombre, @beneficios := (IFNULL(stockAlquiler * precioAlquiler, 0) + IFNULL(stockVenta * precioVenta, 0)) AS beneficios, CASE WHEN @beneficios &gt; 300 THEN 'rentable' WHEN @beneficios BETWEEN 100 AND 300 THEN 'retabilidad media' ELSE 'Rentabilidad baja' END AS estimacion FROM juegos</span></div>
+</div>
+
+<br><div style='font-size:17pt;padding: 3px 5px;margin: 0;color:#000;background-color:#5f5;width:50%;'>Correctas: 7.5</div>
+<div style='font-size:17pt;padding: 3px 5px;margin: 0;color:#000;background-color:#ffd284;width:50%;'>Regulares: 6.0</div>
+<div style='font-size:17pt;padding: 3px 5px;margin: 0;color:#000;background-color:#ff9999;width:50%;'>Incorrectas: 1.0</div>
+<div style='font-size:17pt;padding: 3px 5px;margin: 0;color:#000;background-color:#84d2ff;width:50%;'>Sin hacer: 1</div>
+<div style='font-size:25pt;padding: 5px 5px;margin: 20px 0 120px 0;color:#fff;background-color:#5a5;'>Puntos totales= 7.13  Formato incorrecto *0.5 =3.565  Fuera de plazo *0.7 =2.4955  Puntos Finales = 2.5</div>

@@ -1,0 +1,94 @@
+
+
+1º 
+	
+	Arquitectura de Bon Newman y Harvard.La diferencia principal entre las dos arquitecturas se encuentra 
+en el mapa de memoria: mientras que en la arquitectura Von Neumann hay un único espacio de memoria para datos y 
+para instrucciones, en la arquitectura Harvard hay dos espacios de memoria separados. La von Newman es la que perdura.
+
+	
+
+
+2º
+
+
+	• UC: Unidad de control. Se encarga de recoger las instrucciones y activar y desactivar distintos
+dispositivos en el ordenador para llevar a cabo el comando requerido. Podemos verlo como el gestor
+de trabajos de la CPU y por tanto del ordenador.
+
+	• ALU: Unidad aritmético lógica: Sistema que se encarga de realizar las operaciones matemáticas y
+lógicas disponibles en una determinada CPU: sumas, restas, multiplicaciones, operaciones enteras o
+en coma flotante, etc...
+
+	• Registros: Son una serie de celdas de memoria interna de la CPU donde coloca datos de forma
+temporal para trabajar con ellos. Hay algunos registros que tienen una utilidad determinada como es
+el Contador de Programa que guarda la posición de memoria dónde está la siguiente instrucción a
+ejecutar (se va incrementando a medida que ejecuta comandos y toma nuevos valores en los saltos).
+
+
+
+3º 	
+
+	6.442.450.944 bytes
+
+4º
+
+	Aplicaciones de los SO operativos que realizan en segundo plano para poder realizar las operaciones 
+de la que se encargan
+
+
+5º 
+
+	Multiprogramación, multiusuario y centralizado
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Placa Madre - Es el componente principal a traves del cual se interconectan el resto de los componentos
+	Memoria RAM - Es el espacio de memoria en el que se ejecutan los procesos que estan funcionando en el momento
+	en el ordenador.
+	Procesador - Es el encargado de realizar todas las operaciones que se realizan en el ordenador 
+	Fuente de Alimentación - Convierte la corriente alterna de la toma de corriente en corriente continua para que
+	la pueda utilizar los componentes del ordenador y lo distribuye a ellos
+	Sistemas de almacenamiento - Almacena los datos que no se estan usando y permanecen inalterados incluso cuando 
+	el ordenador esta apagado

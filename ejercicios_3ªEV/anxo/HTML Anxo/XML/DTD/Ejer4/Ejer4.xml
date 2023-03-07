@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Ejer4.dtd" type="application/xml-dtd"?>
+<listaventas>
+    <venta>
+        <ventacreedito>
+            <cantidad></cantidad>
+        </ventacreedito>
+    </venta>
+    <venta>
+        <ventacreedito>
+            <fechafindepago></fechafindepago>
+            <cantidad></cantidad>
+        </ventacreedito>
+    </venta>
+</listaventas>

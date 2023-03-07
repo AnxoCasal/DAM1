@@ -1,0 +1,55 @@
+Muestra o establece la fecha.
+
+DATE  [/T | fecha]
+
+Escriba DATE sin par metros para mostrar la fecha actual y poder 
+especificar una nueva. Presione Entrar para mantener la misma fecha.
+
+Si est n habilitadas las extensiones de comandos, el comando DATE admite
+el par metro /T, que indica al comando mostrar tan solo la fecha actual
+sin pedir una nueva fecha.
+
+Muestra o establece la hora del sistema.
+
+TIME  [/T | hora]
+
+Escriba TIME sin par metros para mostrar la hora actual y poder
+especificar una nueva hora. Presione Entrar si no desea cambiar la hora.
+
+Si est n habilitadas las extensiones de comandos el comando TIME admite
+el par metro /T que indica al comando mostrar tan solo la
+hora actual, sin pedir una nueva hora.
+Muestra el nombre del directorio actual o cambia de directorio.
+
+CHDIR [/D] [unidad:][ruta]
+CHDIR [..]
+CD [/D] [unidad:][ruta]
+CD [..]
+
+  ..   Especifica que desea cambiar al directorio superior.
+
+Escriba CD unidad: para ver el directorio actual de la unidad especificada.
+Escriba CD sin par metros para ver la unidad y el directorio actual.
+
+Use el modificador /D para cambiar la unidad actual adem s del directorio
+actual para una unidad de disco.
+
+Si las extensiones de comando est n habilitadas, CHDIR cambia as¡:
+
+El uso de may£sculas y min£sculas de la cadena del directorio actual se
+convierte al mismo uso que se tiene en los nombres de unidades. As¡, CD
+C:\TEMP establecer  C:\Temp como el directorio actual si ‚ste es el uso
+de may£sculas y min£sculas en la unidad.
+
+El comando CHDIR no trata los espacios como separadores, as¡ que es posible
+usar CD para cambiar a un directorio cuyo nombre de subdirectorio contenga
+un espacio, sin necesidad de escribir el nombre entre comillas. Por ejemplo:
+
+    cd\winnt\profiles\nombredeusuario\programas\men£ inicio
+
+es lo mismo que:
+
+    cd "\winnt\profiles\nombredeusuario\programas\men£ inicio"
+
+que ser¡a lo que hay que escribir si las extensiones estuvieran
+deshabilitadas.

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Ejer3.dtd" type="application/xml-dtd"?>
+<productos>
+    <producto>
+        <monitor>
+            <codigo></codigo>
+            <nombre></nombre>
+            <descripcion></descripcion>
+        </monitor>
+    </producto>
+</productos>

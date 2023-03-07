@@ -1,0 +1,8 @@
+ns
+
+net user 			-- lista usuarios
+net localgroup 			-- lista grupos locales
+net user ana 12345678 /add 	-- crear usuario
+net localgroup nuevos /add	-- crear grupo local
+net localgroup nuevos ana /add	-- añadir usuario a grupo
+net user ana			-- info del usuario

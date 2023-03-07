@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script>
+        function comprobar() {
+
+            var valid = true;
+            var opt = 0;
+            var nombre = document.getElementById("Nombre").value;
+            var apellido = document.getElementById("Apellido").value;
+            var noches = document.getElementById("Noches").value;
+            var habitacion = document.getElementsByName("habitacion");
+            var seleccionado = false;
+            var result = document.getElementById("pResultado")
+            var paragrafos = document.getElementsByTagName("p");
+            for (var i = 0; i < paragrafos.length; i++) {
+                paragrafos[i].innerHTML = "";
+            }
+
+            for (var i = 0; i < habitacion.length; i++) {
+                if (habitacion[i].checked) {
+                    seleccionado = true;
+                    opt = i;
+                }
+            }
+
+            if (nombre == "" || nombre == null) {
+
+                var pnombre = document.getElementById("pNombre");
+                pnombre.innerHTML = "Debe rellenar este campo";
+                valid = false;
+
+            }
+
+            if (apellido == "" || apellido == null) {
+
+                var papellido = document.getElementById("pApellido");
+                papellido.innerHTML = "Debe rellenar este campo";
+                valid = false;
+
+            }
+
+            if (noches < 1 || noches == null) {
+
+                var pnoches = document.getElementById("pNoches");
+                pnoches.innerHTML = "Debe rellenar este campo";
+                valid = false;
+
+            }
+
+            if (!seleccionado) {
+
+                var phabitacion = document.getElementById("pHabitacion");
+                phabitacion.innerHTML = "Debe rellenar este campo";
+                valid = false;
+
+            }
+
+
+            if (valid) {
+                if (opt == 0) {
+                    result.innerHTML = "La estacia costará  " + (noches * 86) +"€"
+                } else if (opt == 1) {
+                    result.innerHTML = "La estacia costará  " + (noches * 200) +"€"
+                } else if (opt == 2) {
+                    result.innerHTML = "La estacia costará  " + (noches * 160) +"€"
+                }
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        Nombre:
+        <input type="text" id="Nombre">
+        <p style="color: red;" id="pNombre"></p><br>
+        Apellidos:
+        <input type="text" id="Apellido">
+        <p style="color: red;" id="pApellido"></p><br>
+        Número de noches:
+        <input type="number" name="" id="Noches">
+        <p style="color: red;" id="pNoches"></p><br>
+        Tipo de habitacion:<br>
+        Normal<input type="radio" value="2" name="habitacion" id="habitacion"><br>
+        Luxury<input type="radio" value="3" name="habitacion" id="habitacion"><br>
+        Familiar<input type="radio" value="4" name="habitacion" id="habitacion">
+        <p style="color: red;" id="pHabitacion"></p><br><br>
+        <input type="button" value="Enviar" onclick="comprobar()">
+        <p id="pResultado"></p><br><br>
+    </form>
+</body>
+
+</html>

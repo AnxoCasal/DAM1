@@ -1,0 +1,13 @@
+50	Select * from empleados,depart;
+54	select * from empleados,depart where empleados.iddepart = depart.iddepart and depart.loc = "madrid";
+55	select alumnos.nombre,asignaturas.nombre,notas.nota from alumnos,asignaturas,notas where notas.alumno=alumnos.codigo && notas.asignatura = asignaturas.cod;
+56	select asignaturas.nombre,alumnos.nombre,alumnos.apellidos from asignaturas join notas on asignaturas.cod = notas.asignatura join alumnos on notas.alumno = alumnos.codigo where asignaturas.nombre = "fol";
+57	select asignaturas.nombre,alumnos.nombre,notas.nota from asignaturas join notas on asignaturas.cod = notas.asignatura join alumnos on notas.alumno = alumnos.codigo where asignaturas.nombre = "fol" && alumnos.nombre="Ray";
+59	select avg(salario) from empleados join depart on empleados.iddepart = depart.iddepart where depart.nombre = "contabilidad";
+61	select depart.nombre,count(codemp) from empleados join depart on empleados.iddepart = depart.iddepart group by empleados.iddepart having count(codemp)>0;
+64	select empleados.iddepart,depart.nombre,oficio,max(salario),min(salario),avg(salario) from empleados join depart on empleados.iddepart = depart.iddepart group by empleados.iddepart,empleados.oficio;
+68	select empleados.apellido,depart.nombre from empleados join depart on empleados.iddepart = depart.iddepart;
+69	select empleados.apellido,depart.nombre,empleados.iddepart from empleados join depart on empleados.iddepart = depart.iddepart where empleados.iddepart = 30;
+70	select empleados.apellido,depart.nombre from empleados left join depart on empleados.iddepart = depart.iddepart;
+73	select empleados.iddepart,depart.nombre from empleados left join depart on empleados.iddepart = depart.iddepart where salario=(select max(salario) from empleados);
+75	select empleados.apellido,depart.nombre from empleados left join depart on empleados.iddepart = depart.iddepart union select empleados.apellido,depart.nombre from empleados right join depart on empleados.iddepart = depart.iddepart;

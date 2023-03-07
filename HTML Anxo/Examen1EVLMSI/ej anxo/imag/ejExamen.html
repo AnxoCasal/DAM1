@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="240">
+    <link rel="stylesheet" type="text/css" href="ejExamen.css"/>
+    <title>Examen 1º Evaluación: Anxo Casal Rodríguez</title>
+    <link rel="shortcut icon" href="coche.ico">
+</head>
+<body>
+    <form method="post" action="mailto:acr03.5a@gmail.com" enctype="text/plain">
+        
+
+        <h1>Por favor, dediquenos unos minutos a mejorar</h1>
+
+        <table>
+            <tr>
+                <td id="primero">
+                <table>
+                    <tr><td>La atencion recibidad a sido:</td></tr>
+                        <tr><td><input name="att" type=radio value="mb">Muy buena</td></tr>
+                        <tr><td><input name="att" type=radio value="b">Buena</td></tr>
+                        <tr><td><input name="att" type=radio value="m">Mala</td></tr>
+                        <tr><td><input name="att" type=radio value="mm">Muy mala</td></tr>
+                </table>
+                </td>
+
+                <td id="segundo">
+                    <table>
+                        <tr><td>¿Volveria a confiar en nosotros?</td></tr>
+                        <tr><td><input name="conf" type=radio value="si">Si</td></tr>
+                        <tr><td><input name="conf" type=radio value="no">No</td></tr>
+                    </table>
+                </td>
+
+                <td id="tercero">
+                    <table>
+                        <td><tr>¿Podría indicarnos la razón?</tr>
+                        <tr><textarea rows="4" cols="60" name="text" placeholder="Por favor escriba aqui la razon. Este campo es obligatorio"></textarea></tr> </td>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td id="cuarto">
+                    <table>
+                        <tr><td>Si desea que contactemos con usted rellene los datos a continuación</td></tr>
+
+                        <tr><td>Tratamiento</td>
+                            <td><select name="tratamiento" size = "1">
+                            <option>Señor</option>
+                            <option>Señora</option>
+                            <option>Señorita</option>
+                        </select></td></tr>
+
+                        <tr><td>Nombre</td>
+                        <td><input type="text" size="20" maxlength="40"></td></tr>
+
+                        <tr><td>E-mail</td>
+                        <td><input type="email" size="20" maxlength="40"></td></tr>
+
+                        <tr><td>Telefono</td>
+                        <td><input type="text" maxlength="9"></td></tr>
+
+                        <tr><td><input type="checkbox" checked>Acepto el tratamiento de datos personales</td></tr>
+
+                    </table>
+                </td>
+                <td id="quinto">
+                    <img src="imagen.png">
+                </td>
+            </tr>
+        </table>
+            <footer>
+                <input type="submit" value="Enviar" id="boton">
+            </footer>
+        
+    </form>
+</body>
+</html>

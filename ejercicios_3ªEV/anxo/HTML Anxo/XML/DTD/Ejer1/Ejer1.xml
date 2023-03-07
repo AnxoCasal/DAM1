@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Ejer1.dtd" type="application/xml-dtd"?>
+<listaventas>
+    <venta>
+        <importe></importe>
+        <comprador></comprador>
+        <vendedor></vendedor>
+        <fecha></fecha>
+        <codigo></codigo>
+    </venta>
+    <venta>
+        <importe></importe>
+        <comprador></comprador>
+        <vendedor></vendedor>
+        <codigo></codigo>
+    </venta>
+</listaventas>

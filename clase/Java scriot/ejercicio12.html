@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletin1 : ejercicio12</title>
+    <script>
+        var paises=[];
+        do{
+            var pais=prompt("Introduzca un país que le gstaría visitar:");
+            paises.push(pais);
+        }while(pais!="");
+    </script>
+</head>
+<body>
+    <ul>
+            <script>
+                for(var i=0;i<paises.length-1;i++){
+                    document.write("<li>");
+                    document.write(paises[i]);
+                    document.write("</li>");
+                }
+            </script>
+    </ul>
+    
+</body>
+</html>

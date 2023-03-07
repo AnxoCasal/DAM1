@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function mostrar(num) {
+
+            var paraf = document.getElementById("img" + num);
+            var animal = "";
+            if (num == 1) {
+                animal = "ardilla"
+            } else if (num == 2) {
+                animal = "puma"
+            } else if (num == 3) {
+                animal = "pollo"
+            } else {
+                animal = "delfin"
+            }
+            paraf.innerHTML = "Estas viendo un " + animal;
+
+        }
+
+        function regresar(num) {
+
+            var paraf = document.getElementById("img" + num);
+            paraf.innerHTML ="";
+            var newimg = document.createElement("img");
+            
+            if (num == 1) {
+            newimg.setAttribute ("src","C://Users//Anxo//Documents//HTML Anxo//Formularios Javascript//1.jpg");
+            } else if (num == 2) {
+            newimg.setAttribute ("src","C://Users//Anxo//Documents//HTML Anxo//Formularios Javascript//2.jpg");
+            } else if (num == 3) {
+            newimg.setAttribute ("src","C://Users//Anxo//Documents//HTML Anxo//Formularios Javascript//3.png");
+            } else {
+            newimg.setAttribute ("src","C://Users//Anxo//Documents//HTML Anxo//Formularios Javascript//4.jpg");
+            }
+            
+            paraf.appendChild(newimg);
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <form action="">
+
+        <div id="img1" style="width: 25%; height: 35%; float: left;" onmouseover="mostrar(1)" onmouseout="regresar(1)">
+            <img id="1" src="C:\Users\Anxo\Documents\HTML Anxo\Formularios Javascript\1.jpg" alt="">
+        </div>
+
+        <div id="img2" style="width: 25%; height: 35%; float: left;" onmouseover="mostrar(2)" onmouseout="regresar(2)">
+            <img id="2" src="C:\Users\Anxo\Documents\HTML Anxo\Formularios Javascript\2.jpg" alt="">
+        </div><br>
+
+        <div id="img3" style="width: 25%; height: 35%; float: left;" onmouseover="mostrar(3)" onmouseout="regresar(3)">
+            <img id="3" src="C:\Users\Anxo\Documents\HTML Anxo\Formularios Javascript\3.png" alt="">
+        </div>
+
+        <div id="img4" style="width: 25%; height: 35%; float: left;" onmouseover="mostrar(4)" onmouseout="regresar(4)">
+            <img id="4" src="C:\Users\Anxo\Documents\HTML Anxo\Formularios Javascript\4.jpg" alt="">
+        </div>
+
+    </form>
+
+</body>
+
+</html>

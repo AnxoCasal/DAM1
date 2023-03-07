@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="agenda.xsd">
+    <nombre>María Pérez </nombre>
+    <telefono>555-127-666</telefono>
+    <direccion>C/ Príncipe 17</direccion>
+    <cp>36202</cp>
+    <ciudad>Vigo</ciudad>
+    <pais>España</pais>
+</agenda> 

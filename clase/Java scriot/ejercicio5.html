@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletin1: ejercicio5</title>
+    <script>
+        function aleatorio(){
+            var numero=Math.floor((Math.random()*(5-1))+1);
+            /*alert(numero);*/
+            var numeros=["cero","uno","dos","tres","cuatro","cinco"];
+           /* alert(numeros[numero]);*/
+           return numeros[numero];
+        }
+    </script>
+</head>
+<body>
+    <h3>
+    <script>
+        var textonumero=aleatorio();
+        document.write("El número generado es :"+textonumero);
+    </script>
+    </h3>
+    
+</body>
+</html>

@@ -1,0 +1,115 @@
+
+
+1. Calcular la dirección de red y dirección de broadcasting (difusión) de las máquinas con las siguientes
+direcciones IP y máscaras de subred:
+
+
+a) 18.120.16.250 de clase A
+
+18.0.0.0
+18.255.255.255
+
+b) 18.120.16.255/16
+
+18.120.0.0
+18.120.255.255
+
+c) 155.4.220.39 máscara 255.255.192.0
+
+192 = 11000000
+220 = 11011100
+
+155.4.192.0
+155.4.255.255
+
+d) 194.209.14.33 de clase C
+
+194.209.14.0
+194.209.14.255
+
+e) 190.33.109.133/24
+
+190.33.109.0
+190.33.109.255
+
+f) 192.168.20.25 máscara 255.255.255.240
+
+25 =  00011001
+240 = 11110000
+
+192.168.20.16
+192.168.20.255
+
+--------------------------------------------------------------------------------------------------------------------------
+
+2. Suponiendo que nuestro ordenador tiene la dirección IP 192.168.5.65 con máscara 255.255.255.0, indicar
+qué significan las siguientes direcciones:
+
+a) 0.0.0.0 en la tabla de rutas
+
+Puede hacer referencia a todas las ips del equipo local o a cualquier ip de la red local.
+
+b) 192.168.5.0
+
+Referencia a la ip de la red
+
+c) 192.168.5.128
+
+Ip de un nodo de la red
+
+d) 192.168.5.255
+
+Direccion de difusion de la red en la que estamos
+
+e) 192.130.5.255
+
+Direccion de difusion de la red 192.130.5.0
+
+f) 127.0.0.1
+
+Se denomina LocalHost y siempre hace referencia a nuestra propia ip de igual cual sea esta
+
+--------------------------------------------------------------------------------------------------------------------------
+
+3. Viendo las direcciones IP de los hosts públicos de una empresa observamos que todas están
+comprendidas entre 194.143.17.145 y 194.143.17.158, ¿Cuál es (probablemente) su dirección de red,
+broadcasting y máscara?
+
+194.143.17.144 red
+195.143.17.159 broadcast
+255.255.255.0 mascara
+
+--------------------------------------------------------------------------------------------------------------------------
+
+4. Tenemos una red con dirección IP de clase B dividida en 7 subredes. Si queremos tener 2500 host por
+subred, ¿qué máscara de subred debemos utilizar?
+
+2500 = 1001.1100.0100
+Por lo tanto necesita 12 bits reservados para hosts
+
+11111111.11111111.11110000.00000000 = 255.255.240.0
+
+--------------------------------------------------------------------------------------------------------------------------
+
+5. Una red clase B será dividida en 20 subredes a las que se sumaran 4 más en los próximos años ¿Cuántos
+bits a uno necesitaremos en la máscara de subred para obtener un total de 2000 host por subred?
+
+2000 = 111.1101.0000
+Por lo tanto necesita 11 bits reservados para hosts
+
+11111111.11111111.11100000.00000000 = 255.255.224.0
+
+--------------------------------------------------------------------------------------------------------------------------
+
+6. La red clase C 192.168.1.0 /30, está dividida en subredes ¿cuántas subredes y cuantos host por subred
+tendrá cada una?
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+7. Tenemos una red clase B con IP 180.10.1.0 y máscara de subred 255.255.254.0 que queremos dividir en 6
+subredes. ¿Cómo serían sus direcciones IP?
+
+
+

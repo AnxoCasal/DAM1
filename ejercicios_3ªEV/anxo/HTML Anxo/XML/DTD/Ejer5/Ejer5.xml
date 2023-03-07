@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Ejer5.dtd" type="application/xml-dtd"?>
+<inventario>
+    <cuaderno>
+        <numhojas></numhojas>
+        <estilo></estilo>
+    </cuaderno>
+</inventario>

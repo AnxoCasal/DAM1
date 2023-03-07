@@ -1,0 +1,7 @@
+@echo off
+
+rem programa: 4.bat
+
+%1
+%2
+%3

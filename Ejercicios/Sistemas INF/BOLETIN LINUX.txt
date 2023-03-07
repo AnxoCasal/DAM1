@@ -1,0 +1,103 @@
+Boletin LINUX
+
+1- el núcleo del SO, junto con un entorno grafico y una selección de aplicaciones.
+
+2- en /etc
+
+3- cd
+
+4- cd ..
+
+5- cal 2002
+
+6- dir /bin
+
+7- 
+
+a)	dir /usr/bin
+
+b)	cd .. 
+	cd ..
+	cd /usr
+	cd /bin
+	ls
+
+c)	cd /usr/bin
+	ls
+
+8-	ls /etc -R
+
+9-	ls -S
+
+10-	ls -lhS
+
+11-	ls /bin -lsS
+
+12-	ls /
+
+13- 	ls ../../..
+
+14-	mkdir gastos
+
+15-	que no tienes permisos para crearlo a no ser que seas "sudo"
+
+16-	cat /etc/fstab
+
+17-	head /etc/bash.bashrc. -n 10
+
+18-	
+
+19-	cat > estilos_favoritos
+
+20-	nano estilos_favoritos
+
+21-	cat estilos_favoritos
+
+22-	head estilos_favoritos -n 3
+
+23-	tail estilos_favoritos -n 1
+
+24-	tail n+2 estilos_favoritos
+
+25-	find -name *.jpg
+
+26- 	find /usr/bin -name j*
+
+27-	find /usr/bin -name k?a*
+
+28-	find . -name '*n'
+
+29-	find . -name '*'
+
+30-	cp /bin/gzip .
+	cp gzip gzip2
+
+31-	mv prueba prueba2
+	mkdir prueba3
+	mv prueba2/* prueba3
+	rm prueba2 -r
+
+32-	No se puede por que entiende que te estar refiriendo a un archivo ya existente debido a los asteriscos e interrogaciones.
+	No, los caracteres especiales dan lugar a confusiones
+
+33-	mucho texto
+
+34-	rm /otras -ir
+
+35-	mv peliculas.txt ../mis_peliculas.txt
+
+36-	654 rw-r-xr--
+	766 rwxrw-rw-
+	777 rwxrwxrwx
+	520 r-x-w----
+	764 rwxrw--w-
+	440 r--r-----
+
+37-	addgroup oficina1
+	addgroup oficina2
+
+38-	
+
+39-	
+
+40-

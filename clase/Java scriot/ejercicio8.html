@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletin1: ejercicio8</title>
+    <script>
+        function preciomascota(mascota){
+            var precio;
+            switch(mascota){
+                case("huron"):
+                    precio=1;
+                    break;
+                case("gato"):
+                    precio=1;
+                    break;
+                case("perro"):
+                    precio=1.5;
+                    break;
+                case("loro"):
+                    precio=2;
+                    break;
+                default:
+                    precio=0;
+                    break;
+            }
+            return precio;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var mascota=prompt("Indica que tipo de mascota tiene: ");
+        var precio=preciomascota(mascota);
+        if(precio==0){
+            alert("Mascota no permitida");
+        }else{
+            alert("Debe pagar "+precio+" euros por su "+mascota);
+        }
+    </script>
+</body>
+</html>

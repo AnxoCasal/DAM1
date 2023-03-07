@@ -1,0 +1,25 @@
+FP	(CODFP, Descripcion)
+Q	(CODQ, Descripcion, Nivel,codFP(FK))
+UC	(CODUC, Descripcion, Nivel, codMF(FK))
+RP	(CODRP, Descripcion)
+CR	(IDCR,Descripcion,OtrosDatoscodRp(fk))
+MF	(CODMF,Nivel,Descripcion)
+CAP	(CODCAP, Descripcion, Otros Datos)
+CEV	(CODCEV, Descripcioncodcap(FK))
+
+Tiene		(CODQ(FK),CODUC(FK))
+Posee		(CODRP(FK),CODUC(FK))
+Es parte	(CODCAP(FK)CODMF(FK))
+
+
+
+Entidad 1(atributo5,atributo7, IDENTIFICADOR1)
+Entidad 2(atributo3,atributo5, IDENTIFICADOR1(FK))
+Entidad 3(atributo4,atributo6, IDENTIFICADOR1(FK))
+
+
+Profesores(COD PROFESOR, nombre, descripcion, especialidad, tlf, )
+Centros(COD CENTRO, direccion, nombre, numalumnos, )
+Publicos(COD CENTRO(FK), Servicios, presupuesto)
+Privados(COD CENTRO(FK), cuota, organizacion)
+Imparte(asignatura,CODprofesor(FK),CODcentro(FK))

@@ -1,0 +1,33 @@
+
+
+	1º - Si el tamaño máximo recomendado paraun clúster en un sistemade archivos FAT32 para Windows es
+de 32KB, y en este sistema operativo se utilizan un máximo de 28 bits para direccionar la FAT en vez
+de los 32 teóricos. ¿Cuál es tamaño máximo de la memoria que puedo formatear?
+
+2^32 * 262.144 = 4.294.967.296 * 262.144 = 1.048.576 GB maximos
+					 = 65.536 GB
+
+	2º - Si tenemos una memoria de 255MB. ¿Cuál es el tamaño del clúster si la formateamos en FAT16?
+
+255MB / 2^16 = 32640 bytes por cluster
+
+
+
+	3º - . Si guardamos un archivo de 20KB en un disco de 1,8GB formateado en FAT16. ¿Cuánto espacio
+estamos desperdiciando?
+
+ 2^16 =  65.536 clusters
+1,8 GB = 1.887.436,8 kb
+1.887.436,8 kb / 65.536 = 29.491,2 bytes por cluster = 28,8kb por cluster
+
+archivo de 20 kb guardado en cluster de 28kb, se van a repartir en 1 clusters sobrando 8kb
+
+
+
+	4º - El tamaño mínimo del clúster en FAT32 es de 4KB. Para una memoria de 2GB, ¿Cuántas entradas
+tendría la tabla? ¿Cuánto ocuparía la tabla en memoria?
+
+
+nº clusters = tmñ volumen / tmñ cluster = 2GB / 4KB = 2*2^30 / 2^2*2^10 = 2^19 cluster (entradas)
+
+2^5*2^19 = 2^24 bits ocupa la tabla = 2MB

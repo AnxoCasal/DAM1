@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="talla">
+        <xs:simpleType>
+            <xs:restriction base="xs:int">
+                <xs:maxInclusive value="43"></xs:maxInclusive>
+                <xs:minExclusive value="35"></xs:minExclusive>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+</xs:schema>

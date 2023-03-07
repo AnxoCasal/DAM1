@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="talla">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="S" />
+                <xs:enumeration value="M" />
+                <xs:enumeration value="L" />
+                <xs:enumeration value="XL" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+</xs:schema>

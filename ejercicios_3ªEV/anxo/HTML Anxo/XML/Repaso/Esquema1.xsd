@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="casino">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="Apuestas">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Partida" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Juego">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="(Blackjack|Ruleta|Tragaperras)"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="Premio">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="(Si|No)"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="Importe" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:float">
+                                                    <xs:minInclusive value="0.01"></xs:minInclusive>
+                                                    <xs:maxInclusive value="100000000"></xs:maxInclusive>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="Fecha" type="xs:date"></xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="Num" type="xs:int"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

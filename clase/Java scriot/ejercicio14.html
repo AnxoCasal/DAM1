@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletin 1: ejercicio14</title>
+    <script>
+        function letranombres(nombres,letra){
+            var nombresletra=[];
+            for(var i=0;i<nombres.length;i++){
+                if(nombres[i][0]==letra || nombres[i][0]==letra.toUpperCase()){
+                    nombresletra.push(nombres[i]);
+                }
+            }
+            return nombresletra;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var nombres=[];
+        do{
+            var nombre=prompt("Introduzca un nombre a la lista:");
+            nombres.push(nombre);
+        }while(nombre!="");
+        var letra=prompt("Introduzca una letra:");
+        var nombresfinal=letranombres(nombres,letra);
+        document.write("<ul>");
+        for(var i=0;i<nombresfinal.length;i++){
+            document.write("<li>");
+            document.write(nombresfinal[i]);
+            document.write("</li>");
+        }   
+        document.write("</ul>");   
+    </script>
+    
+</body>
+</html>
